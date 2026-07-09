@@ -2,8 +2,9 @@
 
 import { uiText, type Lang } from "@/lib/decks";
 import { quizText } from "@/lib/quiz";
+import { solatText } from "@/lib/solat";
 
-export type Mode = "cards" | "quiz";
+export type Mode = "cards" | "quiz" | "salah";
 export type Theme = "light" | "dark" | "system";
 
 export default function Header({
@@ -96,32 +97,30 @@ export default function Header({
       <div className="border-t border-border/60">
         <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-3 flex justify-center">
           <div
-            className="inline-flex items-center rounded-full bg-primary p-1.5 shadow-lg shadow-primary/30"
+            className="inline-flex items-center rounded-full bg-primary p-1 sm:p-1.5 shadow-lg shadow-primary/30"
             role="group"
             aria-label="Mode"
           >
-            <button
-              onClick={() => setMode("cards")}
-              aria-pressed={mode === "cards"}
-              className={`rounded-full px-6 sm:px-8 py-2.5 text-sm sm:text-base font-semibold transition-colors ${th ? "lang-th" : ""} ${
-                mode === "cards"
-                  ? "bg-white text-primary shadow-sm"
-                  : "text-white/95 hover:text-white"
-              }`}
-            >
-              {uiText.flashcards[lang]}
-            </button>
-            <button
-              onClick={() => setMode("quiz")}
-              aria-pressed={mode === "quiz"}
-              className={`rounded-full px-6 sm:px-8 py-2.5 text-sm sm:text-base font-semibold transition-colors ${th ? "lang-th" : ""} ${
-                mode === "quiz"
-                  ? "bg-white text-primary shadow-sm"
-                  : "text-white/95 hover:text-white"
-              }`}
-            >
-              {quizText.quizTitle[lang]}
-            </button>
+            {(
+              [
+                ["cards", uiText.flashcards[lang]],
+                ["quiz", quizText.quizTitle[lang]],
+                ["salah", solatText.navShort[lang]],
+              ] as const
+            ).map(([m, label]) => (
+              <button
+                key={m}
+                onClick={() => setMode(m)}
+                aria-pressed={mode === m}
+                className={`rounded-full px-3.5 sm:px-6 py-2 sm:py-2.5 text-sm sm:text-base font-semibold transition-colors whitespace-nowrap ${th ? "lang-th" : ""} ${
+                  mode === m
+                    ? "bg-white text-primary shadow-sm"
+                    : "text-white/95 hover:text-white"
+                }`}
+              >
+                {label}
+              </button>
+            ))}
           </div>
         </div>
       </div>

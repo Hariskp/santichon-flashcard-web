@@ -21,6 +21,12 @@ Two study modes, switchable from the header:
 - Pick one topic or **All topics mixed**; options are shuffled each attempt.
 - **Instant right/wrong feedback**, live score, and **best score saved per topic**.
 
+**🕌 Salah (How to Pray)**
+- A friendly, step-by-step visual guide to one rak'ah — with **cute hand-drawn SVG
+  characters** for each position (standing, takbir, ruku', sujud, sitting, tashahhud, salam).
+- Each step shows the position name, Arabic term, instruction, and **what to recite**
+  (transliteration + meaning). Navigate with step dots or Back/Next.
+
 Shared across both modes:
 - **English ⇄ Thai toggle** — everything is bilingual; Arabic transliterations where useful.
 - **Light / dark / system theme**; all preferences saved in the browser (`localStorage`).

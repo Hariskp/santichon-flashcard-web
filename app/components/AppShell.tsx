@@ -5,6 +5,7 @@ import { type Lang } from "@/lib/decks";
 import Header, { type Mode, type Theme } from "./Header";
 import FlashcardsSection from "./FlashcardsSection";
 import QuizSection from "./QuizSection";
+import SolatSection from "./SolatSection";
 
 const LANG_KEY = "islam-fc-lang";
 const THEME_KEY = "islam-fc-theme";
@@ -24,7 +25,7 @@ export default function AppShell() {
       const t = localStorage.getItem(THEME_KEY) as Theme | null;
       if (t === "light" || t === "dark" || t === "system") setTheme(t);
       const m = localStorage.getItem(MODE_KEY) as Mode | null;
-      if (m === "cards" || m === "quiz") setMode(m);
+      if (m === "cards" || m === "quiz" || m === "salah") setMode(m);
     } catch {
       /* ignore */
     }
@@ -60,8 +61,10 @@ export default function AppShell() {
       <main className="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
         {mode === "cards" ? (
           <FlashcardsSection lang={lang} />
-        ) : (
+        ) : mode === "quiz" ? (
           <QuizSection lang={lang} />
+        ) : (
+          <SolatSection lang={lang} />
         )}
       </main>
       <footer className="text-center text-xs text-muted py-6 px-4">
