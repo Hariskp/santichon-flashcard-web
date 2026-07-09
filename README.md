@@ -6,14 +6,24 @@ by **มูลนิธิสันติชน (Santichon Foundation)**.
 
 ## Features
 
+Two study modes, switchable from the header:
+
+**🗂️ Flashcards**
 - **12 themed decks** — Foundations, 6 Articles of Faith, 5 Pillars, Prayer (Salah),
   Purification, Fasting, Zakat, Hajj, Core Virtues, Ethics & Manners, Daily Life
   (dress/food/family), and Prophets & Key Phrases.
-- **English ⇄ Thai toggle** — every card is bilingual; Arabic transliterations shown where useful.
 - **Flip cards** — tap (or press Space/Enter) to reveal the answer.
-- **Progress tracking** — mark cards "Got it" / "Review again"; progress is saved in the
-  browser (`localStorage`), per deck.
-- **Shuffle & reset**, keyboard navigation (← →), light/dark/system theme.
+- **Progress tracking** — mark cards "Got it" / "Review again"; saved per deck.
+- **Shuffle & reset**, keyboard navigation (← →).
+
+**✅ Quiz**
+- **43 multiple-choice questions** (5 options each) across the same 12 topics.
+- Pick one topic or **All topics mixed**; options are shuffled each attempt.
+- **Instant right/wrong feedback**, live score, and **best score saved per topic**.
+
+Shared across both modes:
+- **English ⇄ Thai toggle** — everything is bilingual; Arabic transliterations where useful.
+- **Light / dark / system theme**; all preferences saved in the browser (`localStorage`).
 - Fully **static** — no backend required.
 
 ## Tech stack
