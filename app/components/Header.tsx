@@ -94,31 +94,33 @@ export default function Header({
 
       {/* Mode switch */}
       <div className="border-t border-border/60">
-        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-2 flex justify-center">
+        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-3 flex justify-center">
           <div
-            className="inline-flex rounded-xl border border-border bg-surface-2 p-1 text-sm font-medium"
+            className="inline-flex items-center rounded-full bg-violet-600 p-1.5 shadow-lg shadow-violet-600/30"
             role="group"
             aria-label="Mode"
           >
             <button
               onClick={() => setMode("cards")}
-              className={`px-4 py-1.5 rounded-lg transition ${th ? "lang-th" : ""} ${
+              aria-pressed={mode === "cards"}
+              className={`rounded-full px-6 sm:px-8 py-2.5 text-sm sm:text-base font-semibold transition-colors ${th ? "lang-th" : ""} ${
                 mode === "cards"
-                  ? "bg-primary text-primary-fg"
-                  : "text-muted hover:text-foreground"
+                  ? "bg-white text-violet-700 shadow-sm"
+                  : "text-white/95 hover:text-white"
               }`}
             >
-              🗂️ {uiText.flashcards[lang]}
+              {uiText.flashcards[lang]}
             </button>
             <button
               onClick={() => setMode("quiz")}
-              className={`px-4 py-1.5 rounded-lg transition ${th ? "lang-th" : ""} ${
+              aria-pressed={mode === "quiz"}
+              className={`rounded-full px-6 sm:px-8 py-2.5 text-sm sm:text-base font-semibold transition-colors ${th ? "lang-th" : ""} ${
                 mode === "quiz"
-                  ? "bg-primary text-primary-fg"
-                  : "text-muted hover:text-foreground"
+                  ? "bg-white text-violet-700 shadow-sm"
+                  : "text-white/95 hover:text-white"
               }`}
             >
-              ✅ {quizText.quizTitle[lang]}
+              {quizText.quizTitle[lang]}
             </button>
           </div>
         </div>
