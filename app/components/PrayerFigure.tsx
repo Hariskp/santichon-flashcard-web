@@ -1,81 +1,103 @@
+"use client";
+
+import { useId } from "react";
 import { type Pose } from "@/lib/solat";
 
+// Cute "little Muslim" style character: white thobe + white kufi cap, soft
+// shading, calm closed eyes. Original artwork (not copied from any source).
+
 const C = {
-  halo: "#17a98a",
-  robe: "#18a98a",
-  robeShade: "#0e8d72",
-  skin: "#f4caa3",
-  cap: "#0b7a62",
-  mat: "#d9a441",
-  matTop: "#efc775",
-  cheek: "#f2938a",
-  face: "#33413a",
+  robe: "#ffffff",
+  robeShade: "#e4e9f0",
+  robeLine: "#c9d2dd",
+  cap: "#ffffff",
+  capBand: "#e7ebf2",
+  skin: "#f2c9a3",
+  skinShade: "#e6b184",
+  cheek: "#f3a79f",
+  face: "#4b3a30",
+  matA: "#d79a39",
+  matB: "#ecc16a",
 };
 
-function FaceFront({ cx, cy }: { cx: number; cy: number }) {
+function Eyes({ cx, cy, side = false }: { cx: number; cy: number; side?: boolean }) {
   return (
-    <g>
-      <circle cx={cx - 6} cy={cy} r={2} fill={C.face} />
-      <circle cx={cx + 6} cy={cy} r={2} fill={C.face} />
-      <circle cx={cx - 11} cy={cy + 4} r={3.4} fill={C.cheek} opacity={0.55} />
-      <circle cx={cx + 11} cy={cy + 4} r={3.4} fill={C.cheek} opacity={0.55} />
-      <path
-        d={`M${cx - 5} ${cy + 6} Q${cx} ${cy + 11} ${cx + 5} ${cy + 6}`}
-        stroke={C.face}
-        strokeWidth={1.8}
-        strokeLinecap="round"
-        fill="none"
-      />
+    <g stroke={C.face} strokeWidth={2} strokeLinecap="round" fill="none">
+      {side ? (
+        <path d={`M${cx - 5} ${cy} q2.5 3.5 5 0`} />
+      ) : (
+        <>
+          <path d={`M${cx - 9} ${cy} q3 4 6 0`} />
+          <path d={`M${cx + 3} ${cy} q3 4 6 0`} />
+        </>
+      )}
     </g>
   );
 }
 
-function FaceSide({ cx, cy }: { cx: number; cy: number }) {
-  return (
-    <g>
-      <circle cx={cx - 5} cy={cy} r={1.9} fill={C.face} />
-      <circle cx={cx + 3} cy={cy + 1} r={1.9} fill={C.face} />
-      <circle cx={cx - 2} cy={cy + 5} r={3} fill={C.cheek} opacity={0.55} />
-      <path
-        d={`M${cx - 6} ${cy + 6} Q${cx - 2} ${cy + 9} ${cx + 2} ${cy + 6}`}
-        stroke={C.face}
-        strokeWidth={1.7}
-        strokeLinecap="round"
-        fill="none"
-      />
-    </g>
+function Cheeks({ cx, cy, side = false }: { cx: number; cy: number; side?: boolean }) {
+  return side ? (
+    <circle cx={cx - 1} cy={cy + 5} r={3} fill={C.cheek} opacity={0.5} />
+  ) : (
+    <>
+      <circle cx={cx - 12} cy={cy + 5} r={3.6} fill={C.cheek} opacity={0.5} />
+      <circle cx={cx + 12} cy={cy + 5} r={3.6} fill={C.cheek} opacity={0.5} />
+    </>
   );
 }
 
-function Body({ pose }: { pose: Pose }) {
+function Smile({ cx, cy, side = false }: { cx: number; cy: number; side?: boolean }) {
+  return (
+    <path
+      d={side ? `M${cx - 5} ${cy} q4 4 8 0` : `M${cx - 6} ${cy} q6 5 12 0`}
+      stroke={C.face}
+      strokeWidth={2}
+      strokeLinecap="round"
+      fill="none"
+    />
+  );
+}
+
+function Body({ pose, gid }: { pose: Pose; gid: string }) {
+  const robeFill = `url(#robe-${gid})`;
+  const stroke = { stroke: C.robeLine, strokeWidth: 1.4 };
+  const skinStroke = { stroke: C.skinShade, strokeWidth: 1 };
+
   switch (pose) {
     case "stand":
     case "takbir":
     case "qiyam":
       return (
         <g>
-          {/* feet */}
-          <ellipse cx={107} cy={183} rx={11} ry={5} fill={C.robeShade} />
-          <ellipse cx={133} cy={183} rx={11} ry={5} fill={C.robeShade} />
-          {/* robe */}
-          <path d="M103 88 Q120 80 137 88 L152 178 Q120 188 88 178 Z" fill={C.robe} />
-          {/* head + cap */}
-          <circle cx={120} cy={70} r={18} fill={C.skin} />
-          <path d="M101 68 Q120 42 139 68 Q120 62 101 68 Z" fill={C.cap} />
-          <circle cx={120} cy={49} r={4} fill={C.cap} />
-          <FaceFront cx={120} cy={72} />
+          {/* bare feet */}
+          <ellipse cx={108} cy={182} rx={11} ry={6} fill={C.skin} {...skinStroke} />
+          <ellipse cx={132} cy={182} rx={11} ry={6} fill={C.skin} {...skinStroke} />
+          {/* thobe (chubby bell) */}
+          <path
+            d="M99 100 Q120 90 141 100 Q152 150 150 176 Q120 186 90 176 Q88 150 99 100 Z"
+            fill={robeFill}
+            {...stroke}
+          />
+          {/* head */}
+          <circle cx={120} cy={74} r={23} fill={C.skin} {...skinStroke} />
+          {/* kufi cap */}
+          <path d="M98 70 Q100 42 120 41 Q140 42 142 70 Q120 80 98 70 Z" fill={C.cap} {...stroke} />
+          <path d="M98 70 Q120 78 142 70" stroke={C.capBand} strokeWidth={2.4} fill="none" />
+          <Eyes cx={120} cy={76} />
+          <Cheeks cx={120} cy={76} />
+          <Smile cx={120} cy={86} />
           {pose === "stand" && (
-            <path d="M104 116 Q120 128 136 116 L133 129 Q120 137 107 129 Z" fill={C.robeShade} />
+            <path d="M100 120 Q120 132 140 120 L137 134 Q120 142 103 134 Z" fill={robeFill} {...stroke} />
           )}
           {pose === "qiyam" && (
-            <path d="M109 104 Q120 96 131 104 L129 118 Q120 124 111 118 Z" fill={C.skin} />
+            <path d="M106 108 Q120 100 134 108 L131 124 Q120 130 109 124 Z" fill={C.skin} {...skinStroke} />
           )}
           {pose === "takbir" && (
             <g>
-              <path d="M107 92 L101 60 L111 60 L117 94 Z" fill={C.robe} />
-              <path d="M133 92 L139 60 L129 60 L123 94 Z" fill={C.robe} />
-              <rect x={98} y={50} width={11} height={16} rx={5} fill={C.skin} />
-              <rect x={131} y={50} width={11} height={16} rx={5} fill={C.skin} />
+              <path d="M103 104 L96 62 L108 62 L116 106 Z" fill={robeFill} {...stroke} />
+              <path d="M137 104 L144 62 L132 62 L124 106 Z" fill={robeFill} {...stroke} />
+              <ellipse cx={97} cy={56} rx={7} ry={9} fill={C.skin} {...skinStroke} />
+              <ellipse cx={143} cy={56} rx={7} ry={9} fill={C.skin} {...skinStroke} />
             </g>
           )}
         </g>
@@ -85,21 +107,24 @@ function Body({ pose }: { pose: Pose }) {
       return (
         <g>
           {/* legs */}
-          <path d="M110 140 L106 178 L119 178 L121 140 Z" fill={C.robeShade} />
-          <path d="M124 140 L129 178 L142 178 L135 140 Z" fill={C.robe} />
-          <ellipse cx={112} cy={181} rx={10} ry={4} fill={C.robeShade} />
-          <ellipse cx={136} cy={181} rx={10} ry={4} fill={C.robeShade} />
-          {/* horizontal torso */}
+          <path d="M108 142 L104 180 L118 180 L120 142 Z" fill={robeFill} {...stroke} />
+          <path d="M124 142 L128 180 L142 180 L136 142 Z" fill={robeFill} {...stroke} />
+          <ellipse cx={111} cy={183} rx={10} ry={5} fill={C.skin} {...skinStroke} />
+          <ellipse cx={135} cy={183} rx={10} ry={5} fill={C.skin} {...skinStroke} />
+          {/* horizontal back */}
           <path
-            d="M56 118 Q64 105 118 109 Q142 111 142 131 Q142 141 118 141 Q64 141 56 131 Q50 125 56 118 Z"
-            fill={C.robe}
+            d="M54 116 Q62 102 116 106 Q144 108 144 130 Q144 142 116 142 Q62 142 54 132 Q47 124 54 116 Z"
+            fill={robeFill}
+            {...stroke}
           />
           {/* arm to knee */}
-          <path d="M78 130 L86 170 L95 168 L87 128 Z" fill={C.skin} />
-          {/* head + cap */}
-          <circle cx={54} cy={118} r={15} fill={C.skin} />
-          <path d="M42 114 Q46 101 62 107 Q58 116 54 118 Z" fill={C.cap} />
-          <FaceSide cx={50} cy={117} />
+          <path d="M76 130 L84 172 L94 170 L86 128 Z" fill={C.skin} {...skinStroke} />
+          {/* head */}
+          <circle cx={52} cy={116} r={18} fill={C.skin} {...skinStroke} />
+          <path d="M38 110 Q40 92 56 96 Q60 110 52 116 Z" fill={C.cap} {...stroke} />
+          <Eyes cx={48} cy={115} side />
+          <Cheeks cx={48} cy={115} side />
+          <Smile cx={44} cy={122} side />
         </g>
       );
 
@@ -107,15 +132,18 @@ function Body({ pose }: { pose: Pose }) {
       return (
         <g>
           {/* back mound */}
-          <path d="M58 178 Q70 126 120 137 Q160 143 166 178 Z" fill={C.robe} />
-          {/* folded legs/feet right */}
-          <path d="M146 156 Q168 158 166 178 L140 178 Z" fill={C.robeShade} />
-          {/* hands on mat */}
-          <ellipse cx={72} cy={174} rx={10} ry={4} fill={C.skin} />
+          <path d="M56 180 Q68 122 120 134 Q164 141 170 180 Z" fill={robeFill} {...stroke} />
+          {/* folded feet */}
+          <path d="M148 154 Q172 156 170 180 L142 180 Z" fill={robeFill} {...stroke} />
+          <ellipse cx={158} cy={179} rx={9} ry={4} fill={C.skin} {...skinStroke} />
+          {/* hands */}
+          <ellipse cx={72} cy={176} rx={10} ry={4} fill={C.skin} {...skinStroke} />
           {/* head down */}
-          <circle cx={56} cy={162} r={14} fill={C.skin} />
-          <path d="M44 156 Q48 145 63 151 Q60 160 56 162 Z" fill={C.cap} />
-          <FaceSide cx={52} cy={162} />
+          <circle cx={54} cy={160} r={17} fill={C.skin} {...skinStroke} />
+          <path d="M40 154 Q42 138 58 142 Q62 156 54 160 Z" fill={C.cap} {...stroke} />
+          <Eyes cx={50} cy={160} side />
+          <Cheeks cx={50} cy={160} side />
+          <Smile cx={46} cy={166} side />
         </g>
       );
 
@@ -123,27 +151,29 @@ function Body({ pose }: { pose: Pose }) {
     case "tashahhud":
     case "salam": {
       const turned = pose === "salam";
-      const fx = turned ? 126 : 120;
+      const fx = turned ? 128 : 120;
       return (
         <g>
           {/* pooled base */}
-          <path d="M90 152 Q120 141 150 152 Q162 174 150 180 Q120 188 90 180 Q78 174 90 152 Z" fill={C.robe} />
+          <path d="M86 152 Q120 140 154 152 Q166 176 152 182 Q120 190 88 182 Q74 176 86 152 Z" fill={robeFill} {...stroke} />
           {/* torso */}
-          <path d="M104 112 Q120 104 136 112 L147 154 Q120 162 93 154 Z" fill={C.robe} />
-          {/* hands on thighs */}
-          <ellipse cx={101} cy={152} rx={6} ry={4} fill={C.skin} />
-          <ellipse cx={139} cy={152} rx={6} ry={4} fill={C.skin} />
-          {pose === "tashahhud" && <rect x={137} y={137} width={4} height={15} rx={2} fill={C.skin} />}
-          {/* head + cap */}
-          <circle cx={120} cy={90} r={17} fill={C.skin} />
-          <path d="M102 88 Q120 63 138 88 Q120 82 102 88 Z" fill={C.cap} />
-          <circle cx={120} cy={69} r={3.6} fill={C.cap} />
-          {turned ? <FaceSide cx={fx} cy={92} /> : <FaceFront cx={fx} cy={92} />}
+          <path d="M100 110 Q120 100 140 110 L150 156 Q120 164 90 156 Z" fill={robeFill} {...stroke} />
+          {/* hands */}
+          <ellipse cx={99} cy={152} rx={7} ry={5} fill={C.skin} {...skinStroke} />
+          <ellipse cx={141} cy={152} rx={7} ry={5} fill={C.skin} {...skinStroke} />
+          {pose === "tashahhud" && <rect x={139} y={134} width={4.5} height={16} rx={2.2} fill={C.skin} {...skinStroke} />}
+          {/* head */}
+          <circle cx={120} cy={86} r={22} fill={C.skin} {...skinStroke} />
+          <path d="M99 82 Q101 54 120 53 Q139 54 141 82 Q120 92 99 82 Z" fill={C.cap} {...stroke} />
+          <path d="M99 82 Q120 90 141 82" stroke={C.capBand} strokeWidth={2.4} fill="none" />
+          <Eyes cx={fx} cy={88} side={turned} />
+          <Cheeks cx={fx} cy={88} side={turned} />
+          <Smile cx={turned ? fx - 4 : fx} cy={97} side={turned} />
           {turned && (
-            <g stroke={C.robeShade} strokeWidth={1.6} strokeLinecap="round" opacity={0.7}>
-              <path d="M150 86 l5 -3" />
-              <path d="M150 92 l6 0" />
-              <path d="M150 98 l5 3" />
+            <g stroke={C.robeLine} strokeWidth={1.8} strokeLinecap="round" opacity={0.7}>
+              <path d="M152 84 l5 -3" />
+              <path d="M153 90 l6 0" />
+              <path d="M152 96 l5 3" />
             </g>
           )}
         </g>
@@ -153,26 +183,30 @@ function Body({ pose }: { pose: Pose }) {
 }
 
 export default function PrayerFigure({ pose }: { pose: Pose }) {
+  const gid = useId().replace(/:/g, "");
   return (
-    <svg
-      viewBox="0 0 240 210"
-      className="w-full h-auto max-w-[280px]"
-      role="img"
-      aria-hidden
-    >
-      {/* soft halo */}
-      <circle cx={120} cy={104} r={94} fill={C.halo} opacity={0.09} />
+    <svg viewBox="0 0 240 210" className="w-full h-auto max-w-[300px]" role="img" aria-hidden>
+      <defs>
+        <linearGradient id={`robe-${gid}`} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor={C.robe} />
+          <stop offset="1" stopColor={C.robeShade} />
+        </linearGradient>
+        <radialGradient id={`spot-${gid}`} cx="0.5" cy="0.45" r="0.55">
+          <stop offset="0" stopColor="#ffffff" stopOpacity="0.55" />
+          <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
+        </radialGradient>
+        <linearGradient id={`mat-${gid}`} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor={C.matB} />
+          <stop offset="1" stopColor={C.matA} />
+        </linearGradient>
+      </defs>
+      {/* soft spotlight so the white robe reads on any theme */}
+      <circle cx={120} cy={100} r={98} fill={`url(#spot-${gid})`} />
       {/* prayer mat */}
-      <ellipse cx={120} cy={188} rx={86} ry={15} fill={C.mat} />
-      <ellipse cx={120} cy={185} rx={86} ry={13} fill={C.matTop} />
-      <path
-        d="M120 178 q-6 -8 0 -14 q6 6 0 14 Z"
-        fill={C.mat}
-        opacity={0.7}
-      />
-      <circle cx={95} cy={188} r={2} fill={C.mat} opacity={0.7} />
-      <circle cx={145} cy={188} r={2} fill={C.mat} opacity={0.7} />
-      <Body pose={pose} />
+      <ellipse cx={120} cy={190} rx={90} ry={15} fill={C.matA} opacity={0.55} />
+      <ellipse cx={120} cy={187} rx={88} ry={14} fill={`url(#mat-${gid})`} />
+      <path d="M120 179 q-7 -8 0 -15 q7 7 0 15 Z" fill={C.matA} opacity={0.7} />
+      <Body pose={pose} gid={gid} />
     </svg>
   );
 }
