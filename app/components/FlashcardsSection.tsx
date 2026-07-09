@@ -3,12 +3,8 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { decks, uiText, type Deck, type Lang } from "@/lib/decks";
 
-const LANG_KEY = "islam-fc-lang";
-const THEME_KEY = "islam-fc-theme";
 const LEARNED_KEY = "islam-fc-learned";
-
 type LearnedMap = Record<string, string[]>;
-type Theme = "light" | "dark" | "system";
 
 function shuffled(n: number): number[] {
   const a = Array.from({ length: n }, (_, i) => i);
@@ -19,40 +15,18 @@ function shuffled(n: number): number[] {
   return a;
 }
 
-export default function FlashcardApp() {
-  const [mounted, setMounted] = useState(false);
-  const [lang, setLang] = useState<Lang>("en");
-  const [theme, setTheme] = useState<Theme>("system");
+export default function FlashcardsSection({ lang }: { lang: Lang }) {
   const [learned, setLearned] = useState<LearnedMap>({});
   const [activeId, setActiveId] = useState<string | null>(null);
 
-  // Load persisted preferences after mount (avoids hydration mismatch)
   useEffect(() => {
-    setMounted(true);
     try {
-      const l = localStorage.getItem(LANG_KEY);
-      if (l === "en" || l === "th") setLang(l);
-      const t = localStorage.getItem(THEME_KEY) as Theme | null;
-      if (t === "light" || t === "dark" || t === "system") setTheme(t);
       const raw = localStorage.getItem(LEARNED_KEY);
       if (raw) setLearned(JSON.parse(raw));
     } catch {
       /* ignore */
     }
   }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-    localStorage.setItem(LANG_KEY, lang);
-  }, [lang, mounted]);
-
-  useEffect(() => {
-    if (!mounted) return;
-    localStorage.setItem(THEME_KEY, theme);
-    const root = document.documentElement;
-    if (theme === "system") root.removeAttribute("data-theme");
-    else root.setAttribute("data-theme", theme);
-  }, [theme, mounted]);
 
   const persistLearned = useCallback((next: LearnedMap) => {
     setLearned(next);
@@ -63,133 +37,21 @@ export default function FlashcardApp() {
     }
   }, []);
 
-  const t = (v: Record<Lang, string>) => v[lang];
   const activeDeck = decks.find((d) => d.id === activeId) ?? null;
 
-  return (
-    <div className="flex-1 flex flex-col">
-      <Header
-        lang={lang}
-        setLang={setLang}
-        theme={theme}
-        setTheme={setTheme}
-        mounted={mounted}
-      />
-      <main className="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
-        {activeDeck ? (
-          <StudyView
-            key={activeDeck.id}
-            deck={activeDeck}
-            lang={lang}
-            learnedIds={learned[activeDeck.id] ?? []}
-            onBack={() => setActiveId(null)}
-            onUpdateLearned={(ids) =>
-              persistLearned({ ...learned, [activeDeck.id]: ids })
-            }
-          />
-        ) : (
-          <DeckGrid
-            lang={lang}
-            learned={learned}
-            onOpen={(id) => setActiveId(id)}
-          />
-        )}
-      </main>
-      <footer className="text-center text-xs text-muted py-6 px-4">
-        {lang === "th" ? (
-          <span className="lang-th">
-            เนื้อหาจากเอกสารประกอบการเรียนการสอน · มูลนิธิสันติชน
-          </span>
-        ) : (
-          <span>Content adapted from a study booklet by the Santichon Foundation</span>
-        )}
-      </footer>
-    </div>
-  );
-}
-
-/* ── Header ─────────────────────────────────────────────── */
-
-function Header({
-  lang,
-  setLang,
-  theme,
-  setTheme,
-  mounted,
-}: {
-  lang: Lang;
-  setLang: (l: Lang) => void;
-  theme: Theme;
-  setTheme: (t: Theme) => void;
-  mounted: boolean;
-}) {
-  const nextTheme: Record<Theme, Theme> = {
-    system: "light",
-    light: "dark",
-    dark: "system",
-  };
-  const themeIcon: Record<Theme, string> = {
-    system: "🖥️",
-    light: "☀️",
-    dark: "🌙",
-  };
-  return (
-    <header className="border-b border-border bg-surface/70 backdrop-blur sticky top-0 z-10">
-      <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-3 min-w-0">
-          <span
-            aria-hidden
-            className="grid place-items-center w-10 h-10 rounded-xl bg-primary text-primary-fg text-xl shrink-0"
-          >
-            ☪
-          </span>
-          <div className="min-w-0">
-            <h1 className="font-semibold leading-tight truncate">
-              {uiText.appTitle[lang]}
-            </h1>
-            <p className="text-xs text-muted leading-tight truncate">
-              {uiText.appSubtitle[lang]}
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <div
-            className="inline-flex rounded-lg border border-border bg-surface-2 p-0.5 text-sm font-medium"
-            role="group"
-            aria-label="Language"
-          >
-            <button
-              onClick={() => setLang("en")}
-              className={`px-3 py-1.5 rounded-md transition ${
-                lang === "en"
-                  ? "bg-primary text-primary-fg"
-                  : "text-muted hover:text-foreground"
-              }`}
-            >
-              EN
-            </button>
-            <button
-              onClick={() => setLang("th")}
-              className={`px-3 py-1.5 rounded-md transition lang-th ${
-                lang === "th"
-                  ? "bg-primary text-primary-fg"
-                  : "text-muted hover:text-foreground"
-              }`}
-            >
-              ไทย
-            </button>
-          </div>
-          <button
-            onClick={() => setTheme(nextTheme[theme])}
-            className="w-9 h-9 grid place-items-center rounded-lg border border-border bg-surface-2 hover:border-ring transition"
-            aria-label="Toggle theme"
-            title={`Theme: ${theme}`}
-          >
-            <span suppressHydrationWarning>{mounted ? themeIcon[theme] : "🖥️"}</span>
-          </button>
-        </div>
-      </div>
-    </header>
+  return activeDeck ? (
+    <StudyView
+      key={activeDeck.id}
+      deck={activeDeck}
+      lang={lang}
+      learnedIds={learned[activeDeck.id] ?? []}
+      onBack={() => setActiveId(null)}
+      onUpdateLearned={(ids) =>
+        persistLearned({ ...learned, [activeDeck.id]: ids })
+      }
+    />
+  ) : (
+    <DeckGrid lang={lang} learned={learned} onOpen={(id) => setActiveId(id)} />
   );
 }
 
@@ -206,11 +68,9 @@ function DeckGrid({
 }) {
   return (
     <div>
-      <div className="mb-6">
-        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
-          {uiText.chooseDeck[lang]}
-        </h2>
-      </div>
+      <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-6">
+        {uiText.chooseDeck[lang]}
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {decks.map((deck) => {
           const total = deck.cards.length;
@@ -300,10 +160,9 @@ function StudyView({
 
   const mark = useCallback(
     (asLearned: boolean) => {
-      const id = card.id;
       const next = new Set(learnedSet);
-      if (asLearned) next.add(id);
-      else next.delete(id);
+      if (asLearned) next.add(card.id);
+      else next.delete(card.id);
       onUpdateLearned([...next]);
       setFlipped(false);
       setPos((p) => (p + 1) % total);
@@ -324,7 +183,6 @@ function StudyView({
     setFlipped(false);
   };
 
-  // Keyboard shortcuts
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") go(1);
@@ -342,7 +200,6 @@ function StudyView({
 
   return (
     <div className="flex flex-col gap-5">
-      {/* Top bar */}
       <div className="flex items-center gap-3">
         <button
           onClick={onBack}
@@ -359,7 +216,6 @@ function StudyView({
         </div>
       </div>
 
-      {/* Progress */}
       <div>
         <div className="flex justify-between text-xs text-muted mb-1.5">
           <span className={th ? "lang-th" : ""}>{uiText.progress[lang]}</span>
@@ -383,7 +239,6 @@ function StudyView({
             {pos + 1} / {total}
           </div>
 
-          {/* Card */}
           <div className="flip-scene">
             <button
               onClick={() => setFlipped((f) => !f)}
@@ -417,7 +272,6 @@ function StudyView({
             </button>
           </div>
 
-          {/* Answer actions */}
           <div className="grid grid-cols-2 gap-3">
             <button
               onClick={() => mark(false)}
@@ -433,7 +287,6 @@ function StudyView({
             </button>
           </div>
 
-          {/* Navigation */}
           <div className="flex items-center justify-between gap-3">
             <button
               onClick={() => go(-1)}

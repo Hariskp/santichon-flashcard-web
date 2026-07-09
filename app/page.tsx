@@ -1,5 +1,5 @@
-import FlashcardApp from "./components/FlashcardApp";
+import AppShell from "./components/AppShell";
 
 export default function Home() {
-  return <FlashcardApp />;
+  return <AppShell />;
 }

@@ -914,6 +914,7 @@ export const decks: Deck[] = [
 
 export const uiText = {
   appTitle: { en: "Learn Islam", th: "เรียนรู้อิสลาม" },
+  flashcards: { en: "Flashcards", th: "แฟลชการ์ด" },
   appSubtitle: {
     en: "Flashcards for new Muslims",
     th: "แฟลชการ์ดสำหรับมุสลิมใหม่",
