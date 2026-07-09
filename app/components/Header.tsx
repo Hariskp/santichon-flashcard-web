@@ -96,7 +96,7 @@ export default function Header({
       <div className="border-t border-border/60">
         <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-3 flex justify-center">
           <div
-            className="inline-flex items-center rounded-full bg-violet-600 p-1.5 shadow-lg shadow-violet-600/30"
+            className="inline-flex items-center rounded-full bg-primary p-1.5 shadow-lg shadow-primary/30"
             role="group"
             aria-label="Mode"
           >
@@ -105,7 +105,7 @@ export default function Header({
               aria-pressed={mode === "cards"}
               className={`rounded-full px-6 sm:px-8 py-2.5 text-sm sm:text-base font-semibold transition-colors ${th ? "lang-th" : ""} ${
                 mode === "cards"
-                  ? "bg-white text-violet-700 shadow-sm"
+                  ? "bg-white text-primary shadow-sm"
                   : "text-white/95 hover:text-white"
               }`}
             >
@@ -116,7 +116,7 @@ export default function Header({
               aria-pressed={mode === "quiz"}
               className={`rounded-full px-6 sm:px-8 py-2.5 text-sm sm:text-base font-semibold transition-colors ${th ? "lang-th" : ""} ${
                 mode === "quiz"
-                  ? "bg-white text-violet-700 shadow-sm"
+                  ? "bg-white text-primary shadow-sm"
                   : "text-white/95 hover:text-white"
               }`}
             >
