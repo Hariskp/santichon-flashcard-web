@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f7f5;
+  --surface: #ffffff;
+  --surface-2: #eef3ef;
+  --foreground: #14231c;
+  --muted: #5c6f66;
+  --border: #dce6df;
+  --primary: #0f6b52;
+  --primary-fg: #ffffff;
+  --accent: #b6892f;
+  --accent-soft: #f6ecd6;
+  --ring: #14a37f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b1512;
+    --surface: #12211b;
+    --surface-2: #16271f;
+    --foreground: #e7efe9;
+    --muted: #9db3a8;
+    --border: #24382e;
+    --primary: #22a583;
+    --primary-fg: #04140f;
+    --accent: #e0b455;
+    --accent-soft: #2a2416;
+    --ring: #2fd3a6;
+  }
+}
+
+:root[data-theme="light"] {
+  --background: #f4f7f5;
+  --surface: #ffffff;
+  --surface-2: #eef3ef;
+  --foreground: #14231c;
+  --muted: #5c6f66;
+  --border: #dce6df;
+  --primary: #0f6b52;
+  --primary-fg: #ffffff;
+  --accent: #b6892f;
+  --accent-soft: #f6ecd6;
+  --ring: #14a37f;
+}
+
+:root[data-theme="dark"] {
+  --background: #0b1512;
+  --surface: #12211b;
+  --surface-2: #16271f;
+  --foreground: #e7efe9;
+  --muted: #9db3a8;
+  --border: #24382e;
+  --primary: #22a583;
+  --primary-fg: #04140f;
+  --accent: #e0b455;
+  --accent-soft: #2a2416;
+  --ring: #2fd3a6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-fg: var(--primary-fg);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans), var(--font-thai), system-ui, sans-serif;
+  --font-thai: var(--font-thai);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), var(--font-thai), system-ui, sans-serif;
+}
+
+/* Subtle geometric backdrop */
+.bg-pattern {
+  background-image: radial-gradient(
+      circle at 1px 1px,
+      color-mix(in srgb, var(--primary) 12%, transparent) 1px,
+      transparent 0
+    );
+  background-size: 22px 22px;
+}
+
+.lang-th {
+  font-family: var(--font-thai), var(--font-geist-sans), system-ui, sans-serif;
+  line-height: 1.7;
+}
+
+/* 3D flip card */
+.flip-scene {
+  perspective: 1600px;
+}
+.flip-card {
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4, 0.15, 0.2, 1);
+}
+.flip-card.is-flipped {
+  transform: rotateY(180deg);
+}
+.flip-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-card {
+    transition: none;
+  }
+}
