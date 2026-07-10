@@ -52,6 +52,29 @@ export const solatSteps: SolatStep[] = [
     ],
   },
   {
+    id: "st-iftitah",
+    name: { en: "Opening Supplication", th: "ดุอาอ์เปิด (อิฟติตาห์)" },
+    term: "Dua al-Istiftah",
+    instruction: {
+      en: "After the takbir and before Al-Fatihah, recite the opening supplication quietly:",
+      th: "หลังตักบีร และก่อนอ่านอัลฟาติฮะฮ ให้อ่านดุอาอ์เปิดอย่างเบา ๆ:",
+    },
+    recite: [
+      {
+        arabic:
+          "سُبْحَانَكَ اللّٰهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلٰهَ غَيْرُكَ",
+        say: {
+          en: "Subḥānakallāhumma wa biḥamdik, wa tabārakasmuk, wa ta'ālā jadduk, wa lā ilāha ghayruk",
+          th: "ซุบฮานะกัลลอฮุมมะ วะบิฮัมดิก, วะตะบาเราะกัสมุก, วะตะอาลา ญัดดุก, วะลา อิลาฮะ ฆ็อยรุก",
+        },
+        meaning: {
+          en: "Glory be to You, O Allah, and all praise; blessed is Your name, exalted is Your majesty, and there is no god but You.",
+          th: "มหาบริสุทธิ์แด่พระองค์ โอ้อัลลอฮ และด้วยการสรรเสริญต่อพระองค์ พระนามของพระองค์ทรงจำเริญ ความยิ่งใหญ่ของพระองค์ทรงสูงส่ง และไม่มีพระเจ้าอื่นใดนอกจากพระองค์",
+        },
+      },
+    ],
+  },
+  {
     id: "st3",
     name: { en: "Recite Al-Fatihah", th: "อ่านซูเราะฮอัลฟาติฮะฮ" },
     term: "Qiyam",
