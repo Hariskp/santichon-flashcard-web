@@ -12,6 +12,7 @@ interface SessionQ {
   question: Record<Lang, string>;
   options: Record<Lang, string[]>;
   correct: number;
+  explanation: Record<Lang, string>;
 }
 
 function shuffle<T>(arr: T[]): T[] {
@@ -33,7 +34,7 @@ function buildSession(topicId: string): SessionQ[] {
     const en = perm.map((i) => q.options.en[i]);
     const th = perm.map((i) => q.options.th[i]);
     const correct = perm.indexOf(q.correct);
-    return { id: q.id, question: q.question, options: { en, th }, correct };
+    return { id: q.id, question: q.question, options: { en, th }, correct, explanation: q.explanation };
   });
 }
 
@@ -269,7 +270,7 @@ export default function QuizSection({ lang }: { lang: Lang }) {
       </div>
 
       {answered && (
-        <div className="flex items-center justify-between gap-3 flex-wrap">
+        <>
           <p
             className={`font-semibold ${
               selected === q.correct ? "text-primary" : "text-red-600 dark:text-red-400"
@@ -277,13 +278,21 @@ export default function QuizSection({ lang }: { lang: Lang }) {
           >
             {selected === q.correct ? `✓ ${quizText.correct[lang]}` : `✗ ${quizText.wrong[lang]}`}
           </p>
+          <div className="rounded-2xl bg-surface-2 border border-border p-4">
+            <span className={`text-xs font-semibold text-accent ${th ? "lang-th" : ""}`}>
+              💡 {quizText.why[lang]}
+            </span>
+            <p className={`text-sm text-foreground mt-1 leading-relaxed ${th ? "lang-th" : ""}`}>
+              {q.explanation[lang]}
+            </p>
+          </div>
           <button
             onClick={nextQ}
-            className={`px-5 py-2.5 rounded-xl bg-primary text-primary-fg font-medium hover:opacity-90 transition ml-auto ${th ? "lang-th" : ""}`}
+            className={`px-5 py-2.5 rounded-xl bg-primary text-primary-fg font-medium hover:opacity-90 transition self-end ${th ? "lang-th" : ""}`}
           >
             {pos + 1 >= total ? quizText.seeResult[lang] : quizText.nextQ[lang]} →
           </button>
-        </div>
+        </>
       )}
     </div>
   );
