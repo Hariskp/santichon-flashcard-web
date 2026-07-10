@@ -6,6 +6,7 @@
 import { type Lang } from "./decks";
 
 export interface ReciteLine {
+  heading?: Record<Lang, string>; // optional label above a group (e.g. a surah name)
   arabic?: string;
   say: Record<Lang, string>; // pronunciation: en = romanized, th = Thai script
   meaning?: Record<Lang, string>;
@@ -132,6 +133,69 @@ export const solatSteps: SolatStep[] = [
           en: "The path of those You have blessed — not of those who earned anger, nor of those who went astray",
           th: "ทางของบรรดาผู้ที่พระองค์ทรงโปรดปราน มิใช่ทางของผู้ที่ถูกกริ้ว และมิใช่ทางของผู้ที่หลงผิด",
         },
+      },
+    ],
+  },
+  {
+    id: "st-surah",
+    name: { en: "Recite a short Surah", th: "อ่านซูเราะฮสั้น ๆ" },
+    term: "Surah",
+    instruction: {
+      en: "After Al-Fatihah, recite a short surah — commonly Al-Kāfirūn in the 1st rak'ah and Al-Ikhlāṣ in the 2nd rak'ah:",
+      th: "หลังอัลฟาติฮะฮ ให้อ่านซูเราะฮสั้น ๆ ที่นิยมคือ อัลกาฟิรูนในร็อกอัตที่ 1 และอัลอิคลาศในร็อกอัตที่ 2:",
+    },
+    recite: [
+      {
+        heading: { en: "Surah Al-Kāfirūn · 1st rak'ah", th: "ซูเราะฮอัลกาฟิรูน · ร็อกอัตที่ 1" },
+        arabic: "قُلْ يَا اَيُّهَا الْكَافِرُوْن",
+        say: { en: "Qul yā ayyuhal-kāfirūn", th: "กุล ยา อัยยุฮัล กาฟิรูน" },
+        meaning: { en: "Say: O disbelievers,", th: "จงกล่าวเถิด โอ้บรรดาผู้ปฏิเสธศรัทธาเอ๋ย" },
+      },
+      {
+        arabic: "لَا اَعْبُدُ مَا تَعْبُدُوْن",
+        say: { en: "Lā a'budu mā ta'budūn", th: "ลา อะอฺบุดุ มา ตะอฺบุดูน" },
+        meaning: { en: "I do not worship what you worship,", th: "ฉันจะไม่เคารพภักดีสิ่งที่พวกท่านเคารพภักดี" },
+      },
+      {
+        arabic: "وَلَا اَنْتُمْ عٰبِدُوْنَ مَا اَعْبُد",
+        say: { en: "Wa lā antum 'ābidūna mā a'bud", th: "วะลา อันตุม อาบิดูนะ มา อะอฺบุด" },
+        meaning: { en: "nor are you worshippers of what I worship,", th: "และพวกท่านก็ไม่ใช่ผู้เคารพภักดีสิ่งที่ฉันเคารพภักดี" },
+      },
+      {
+        arabic: "وَلَا اَنَا عَابِدٌ مَّا عَبَدْتُّم",
+        say: { en: "Wa lā ana 'ābidum mā 'abadtum", th: "วะลา อะนา อาบิดุม มา อะบัดตุม" },
+        meaning: { en: "nor will I worship what you worship,", th: "และฉันก็ไม่ใช่ผู้เคารพภักดีสิ่งที่พวกท่านเคารพภักดี" },
+      },
+      {
+        arabic: "وَلَا اَنْتُمْ عٰبِدُوْنَ مَا اَعْبُد",
+        say: { en: "Wa lā antum 'ābidūna mā a'bud", th: "วะลา อันตุม อาบิดูนะ มา อะอฺบุด" },
+        meaning: { en: "nor will you worship what I worship.", th: "และพวกท่านก็ไม่ใช่ผู้เคารพภักดีสิ่งที่ฉันเคารพภักดี" },
+      },
+      {
+        arabic: "لَكُمْ دِيْنُكُمْ وَلِيَ دِيْن",
+        say: { en: "Lakum dīnukum wa liya dīn", th: "ละกุม ดีนุกุม วะลิยะ ดีน" },
+        meaning: { en: "For you is your religion, and for me is my religion.", th: "สำหรับพวกท่านก็คือศาสนาของพวกท่าน และสำหรับฉันก็คือศาสนาของฉัน" },
+      },
+      {
+        heading: { en: "Surah Al-Ikhlāṣ · 2nd rak'ah", th: "ซูเราะฮอัลอิคลาศ · ร็อกอัตที่ 2" },
+        arabic: "قُلْ هُوَ اللّٰهُ اَحَد",
+        say: { en: "Qul huwallāhu aḥad", th: "กุล ฮุวัลลอฮุ อะฮัด" },
+        meaning: { en: "Say: He is Allah, the One,", th: "จงกล่าวเถิด พระองค์คืออัลลอฮ ผู้ทรงเอกะ" },
+      },
+      {
+        arabic: "اَللّٰهُ الصَّمَد",
+        say: { en: "Allāhuṣ-ṣamad", th: "อัลลอฮุศ เศาะมัด" },
+        meaning: { en: "Allah, the Eternal Refuge.", th: "อัลลอฮนั้นทรงเป็นที่พึ่ง" },
+      },
+      {
+        arabic: "لَمْ يَلِدْ وَلَمْ يُوْلَد",
+        say: { en: "Lam yalid wa lam yūlad", th: "ลัม ยะลิด วะลัม ยูลัด" },
+        meaning: { en: "He neither begets nor is born,", th: "พระองค์ไม่ทรงประสูติ และไม่ทรงถูกประสูติ" },
+      },
+      {
+        arabic: "وَلَمْ يَكُنْ لَّهٗ كُفُوًا اَحَد",
+        say: { en: "Wa lam yakul-lahū kufuwan aḥad", th: "วะลัม ยะกุลละฮู กุฟุวัน อะฮัด" },
+        meaning: { en: "and there is none comparable to Him.", th: "และไม่มีผู้ใดเสมอเหมือนพระองค์" },
       },
     ],
   },

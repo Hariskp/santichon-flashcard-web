@@ -76,6 +76,11 @@ export default function SolatSection({ lang }: { lang: Lang }) {
             <div className="divide-y divide-primary/10">
               {step.recite.map((line, i) => (
                 <div key={i} className="p-4 flex flex-col gap-2">
+                  {line.heading && (
+                    <p className={`text-xs font-bold uppercase tracking-wide text-accent ${th ? "lang-th" : ""}`}>
+                      {line.heading[lang]}
+                    </p>
+                  )}
                   {line.arabic && (
                     <p className="lang-ar text-2xl sm:text-3xl text-foreground text-right" lang="ar">
                       {line.arabic}
