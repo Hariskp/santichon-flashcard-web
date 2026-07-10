@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { type Lang } from "@/lib/decks";
-import { quiz, quizText, quizTopics, type QuizQuestion } from "@/lib/quiz";
+import { quiz, quizText, quizTopics, ROUND_SIZE, type QuizQuestion } from "@/lib/quiz";
 
 const BEST_KEY = "islam-quiz-best";
 type BestMap = Record<string, { pct: number; score: number; total: number }>;
@@ -25,7 +25,9 @@ function shuffle<T>(arr: T[]): T[] {
 
 function buildSession(topicId: string): SessionQ[] {
   const pool = topicId === "all" ? quiz : quiz.filter((q) => q.topic === topicId);
-  return shuffle(pool).map((q: QuizQuestion) => {
+  return shuffle(pool)
+    .slice(0, ROUND_SIZE)
+    .map((q: QuizQuestion) => {
     // Permute the 5 options, applying the same order to both languages.
     const perm = shuffle([0, 1, 2, 3, 4]);
     const en = perm.map((i) => q.options.en[i]);
@@ -122,7 +124,7 @@ export default function QuizSection({ lang }: { lang: Lang }) {
               {quizText.allTopics[lang]}
             </h3>
             <p className="text-sm text-muted">
-              {quiz.length} {quizText.questions[lang]}
+              {Math.min(ROUND_SIZE, quiz.length)} {quizText.questions[lang]} · {quizText.fromPool[lang]} {quiz.length}
               <BestBadge best={best["all"]} lang={lang} />
             </p>
           </div>
