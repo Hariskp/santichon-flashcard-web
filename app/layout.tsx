@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Noto_Sans_Thai } from "next/font/google";
+import { Noto_Naskh_Arabic } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +12,12 @@ const geistSans = Geist({
 const notoThai = Noto_Sans_Thai({
   variable: "--font-thai",
   subsets: ["thai", "latin"],
+});
+
+const notoArabic = Noto_Naskh_Arabic({
+  variable: "--font-arabic",
+  subsets: ["arabic"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +34,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${notoThai.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${notoThai.variable} ${notoArabic.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-pattern">{children}</body>
     </html>

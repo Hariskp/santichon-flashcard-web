@@ -22,10 +22,10 @@ Two study modes, switchable from the header:
 - **Instant right/wrong feedback**, live score, and **best score saved per topic**.
 
 **🕌 Salah (How to Pray)**
-- A friendly, step-by-step visual guide to one rak'ah — with **cute hand-drawn SVG
-  characters** for each position (standing, takbir, ruku', sujud, sitting, tashahhud, salam).
-- Each step shows the position name, Arabic term, instruction, and **what to recite**
-  (transliteration + meaning). Navigate with step dots or Back/Next.
+- A step-by-step guide to one rak'ah, focused on **pronunciation**.
+- Each step shows the position name, instruction, and the recitation in **Arabic script +
+  how to say it** (romanized for EN, Thai คำอ่าน for TH) **+ meaning** — including the full
+  Al-Fatihah and Tashahhud. Navigate with step dots or Back/Next.
 
 Shared across both modes:
 - **English ⇄ Thai toggle** — everything is bilingual; Arabic transliterations where useful.

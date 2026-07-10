@@ -95,6 +95,12 @@ body {
   line-height: 1.7;
 }
 
+.lang-ar {
+  font-family: var(--font-arabic), serif;
+  direction: rtl;
+  line-height: 2;
+}
+
 /* 3D flip card */
 .flip-scene {
   perspective: 1600px;
