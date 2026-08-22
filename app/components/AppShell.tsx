@@ -73,10 +73,12 @@ export default function AppShell() {
       <footer className="text-center text-xs text-muted py-6 px-4">
         {lang === "th" ? (
           <span className="lang-th">
-            เนื้อหาจากเอกสารประกอบการเรียนการสอน · มูลนิธิสันติชน
+            เนื้อหาจากเอกสารประกอบการเรียนการสอน จุดประสงค์เพื่อการศึกษาอิสลาม สำหรับมุสลิมใหม่ เท่านั้น ฟรี!!
           </span>
         ) : (
-          <span>Content adapted from a study booklet by the Santichon Foundation</span>
+          <span>
+            Content from teaching materials, for the purpose of Islamic education for new Muslims only. Free!!
+          </span>
         )}
       </footer>
     </div>
