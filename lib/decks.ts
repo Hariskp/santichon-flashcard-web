@@ -58,8 +58,8 @@ export const decks: Deck[] = [
         id: "f4",
         front: { en: "What does “Mu’min” mean?", th: "“มุอ์มิน” หมายถึงอะไร?" },
         back: {
-          en: "“Mu’min” means “a believer in Allah.” A believing man is Muslimin; a believing woman is Muslimah.",
-          th: "“มุอ์มิน” หมายถึง “ผู้ศรัทธาในอัลลอฮ” ชายผู้ศรัทธาเรียก มุสลิมีน หญิงผู้ศรัทธาเรียก มุสลิมะฮ",
+          en: "“Mu’min” means “a believer in Allah.” A believing man is a Mu’min; a believing woman is a Mu’minah.",
+          th: "“มุอ์มิน” หมายถึง “ผู้ศรัทธาในอัลลอฮ” ผู้ศรัทธาชายเรียกว่า มุอ์มิน ผู้ศรัทธาหญิงเรียกว่า มุอ์มินะฮ",
         },
       },
       {
