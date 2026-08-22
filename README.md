@@ -45,6 +45,14 @@ npm run build   # production build
 npm start       # serve the production build
 ```
 
+## Content accuracy
+
+Islamic content is sensitive, so accuracy is a first-class concern. Every recitation, the
+Shahada, all flashcards, and all quiz answers were audited line by line against the two
+source documents and standard teachings. See **[CONTENT-ACCURACY.md](CONTENT-ACCURACY.md)**
+for exactly what was checked, what was corrected, and the recommended final human review by
+a qualified imam/teacher.
+
 ## Editing content
 
 All flashcard content lives in [`lib/decks.ts`](lib/decks.ts). Each card has
