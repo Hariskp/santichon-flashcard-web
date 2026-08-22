@@ -1639,6 +1639,258 @@ export const quiz: QuizQuestion[] = [
     correct: 0,
     explanation: { en: "Handshaking is allowed with the same gender or with a mahram (a relative you cannot marry).", th: "การสัมผัสมืออนุญาตกับเพศเดียวกัน หรือกับญาติมะฮ์รอม (ผู้ที่แต่งงานด้วยไม่ได้)" },
   },
+
+  // ── Marriage & Family ──────────────────────────────────
+  {
+    id: "q_fam1",
+    topic: "family",
+    question: { en: "Which is a condition for a valid Islamic marriage?", th: "ข้อใดเป็นเงื่อนไขของการแต่งงานที่ถูกต้องในอิสลาม?" },
+    options: {
+      en: ["The bride's guardian (wali) consents", "The couple are the same age", "They live in the same city", "They have known each other 5 years", "They are wealthy"],
+      th: ["ผู้ปกครองหญิง (วะลี) ยินยอม", "ทั้งคู่อายุเท่ากัน", "อยู่เมืองเดียวกัน", "รู้จักกันมา 5 ปี", "เป็นคนร่ำรวย"],
+    },
+    correct: 0,
+    explanation: { en: "A valid marriage needs the wali's consent, a dowry (mahar), two witnesses, and an offer & acceptance.", th: "การแต่งงานที่ถูกต้องต้องมีวะลียินยอม มีสินสอด (มะฮัร) มีพยาน 2 คน และมีคำเสนอและคำตอบรับ" },
+  },
+  {
+    id: "q_fam2",
+    topic: "family",
+    question: { en: "What is the maximum number of wives a man may have, with full fairness?", th: "ผู้ชายมีภรรยาได้มากที่สุดกี่คน โดยให้ความยุติธรรม?" },
+    options: { en: ["4", "2", "1", "3", "Unlimited"], th: ["4 คน", "2 คน", "1 คน", "3 คน", "ไม่จำกัด"] },
+    correct: 0,
+    explanation: { en: "Up to four, but only if he can be completely fair; otherwise, only one.", th: "ไม่เกิน 4 คน แต่เฉพาะเมื่อให้ความยุติธรรมได้ มิฉะนั้นให้เพียงคนเดียว" },
+  },
+  {
+    id: "q_fam3",
+    topic: "family",
+    question: { en: "Which of these women may a man NOT marry?", th: "ผู้ชายแต่งงานกับหญิงคนใดไม่ได้?" },
+    options: {
+      en: ["His own sister", "A stranger", "A widow", "A neighbor", "A colleague"],
+      th: ["พี่สาว/น้องสาวของตัวเอง", "คนแปลกหน้า", "หญิงหม้าย", "เพื่อนบ้าน", "เพื่อนร่วมงาน"],
+    },
+    correct: 0,
+    explanation: { en: "A man may never marry a mahram — his mother, daughter, sisters, aunts, nieces, etc.", th: "ผู้ชายแต่งงานกับมะฮ์รอมไม่ได้ เช่น แม่ ลูกสาว พี่สาว/น้องสาว ป้า/น้า/อา หลานสาว" },
+  },
+  {
+    id: "q_fam4",
+    topic: "family",
+    question: { en: "Divorce (talaq) in Islam is…", th: "การหย่า (ฏอลาก) ในอิสลามเป็นสิ่งใด?" },
+    options: {
+      en: ["Permitted but the most disliked lawful act", "Completely forbidden", "Strongly recommended", "A pillar of Islam", "Required yearly"],
+      th: ["อนุญาต แต่เป็นสิ่งที่อัลลอฮไม่ชอบที่สุดในสิ่งที่อนุมัติ", "ห้ามโดยเด็ดขาด", "ส่งเสริมให้ทำอย่างยิ่ง", "หลักปฏิบัติของอิสลาม", "ต้องทำทุกปี"],
+    },
+    correct: 0,
+    explanation: { en: "Talaq is halal but the most hated of permitted things — Islam sets rules to avoid it.", th: "ฏอลากเป็นฮาลาลแต่เป็นสิ่งที่ไม่ชอบที่สุดในสิ่งที่อนุมัติ อิสลามกำหนดกฎเพื่อหลีกเลี่ยง" },
+  },
+  {
+    id: "q_fam5",
+    topic: "family",
+    question: { en: "The waiting period a woman observes after divorce or widowhood is called…", th: "ช่วงเวลารอคอยของหญิงหลังหย่าหรือเป็นหม้ายเรียกว่าอะไร?" },
+    options: {
+      en: ["Iddah", "Mahar", "Nikah", "Talaq", "Walimah"],
+      th: ["อิดดะฮ", "มะฮัร", "นิกาห์", "ฏอลาก", "วะลีมะฮ"],
+    },
+    correct: 0,
+    explanation: { en: "The iddah (about 3 monthly cycles) confirms no pregnancy and allows reconciliation.", th: "อิดดะฮ (ประมาณ 3 รอบประจำเดือน) เพื่อยืนยันว่าไม่มีครรภ์และเปิดโอกาสคืนดี" },
+  },
+  {
+    id: "q_fam6",
+    topic: "family",
+    question: { en: "A revocable divorce, where the husband may return within the iddah, is called…", th: "การหย่าที่สามีคืนดีได้ภายในอิดดะฮเรียกว่าอะไร?" },
+    options: {
+      en: ["Talaq Raj'i", "Talaq Ba'in", "Khul'", "Faskh", "Li'an"],
+      th: ["ฏอลากรอจญอี (หย่ากลับคืนได้)", "ฏอลากบาอิน (หย่าขาด)", "คุลอ์", "ฟะซัค", "ลิอาน"],
+    },
+    correct: 0,
+    explanation: { en: "Talaq Raj'i is revocable within the iddah; Talaq Ba'in is irrevocable.", th: "ฏอลากรอจญอีคืนดีได้ภายในอิดดะฮ ส่วนฏอลากบาอินคือหย่าขาดคืนไม่ได้" },
+  },
+  {
+    id: "q_fam7",
+    topic: "family",
+    question: { en: "Whose consent is required for a marriage (for the bride)?", th: "การแต่งงานต้องได้รับความยินยอมจากใคร (ฝ่ายหญิง)?" },
+    options: {
+      en: ["Her guardian (wali)", "The imam only", "The government", "Her neighbors", "No one"],
+      th: ["ผู้ปกครองของเธอ (วะลี)", "อิมามเท่านั้น", "รัฐบาล", "เพื่อนบ้านของเธอ", "ไม่ต้องใครเลย"],
+    },
+    correct: 0,
+    explanation: { en: "The bride's wali (guardian) must consent to the marriage.", th: "วะลี (ผู้ปกครอง) ของฝ่ายหญิงต้องให้ความยินยอมในการแต่งงาน" },
+  },
+  {
+    id: "q_fam8",
+    topic: "family",
+    question: { en: "A close relative a person can never marry is called…", th: "ญาติสนิทที่แต่งงานด้วยไม่ได้เรียกว่าอะไร?" },
+    options: {
+      en: ["Mahram", "Wali", "Mahar", "Sahabah", "Ansar"],
+      th: ["มะฮ์รอม", "วะลี", "มะฮัร", "ศ่อฮาบะฮ", "อันศอร"],
+    },
+    correct: 0,
+    explanation: { en: "A mahram is a blood relative one may never marry (e.g. parent, sibling, aunt/uncle).", th: "มะฮ์รอมคือญาติสายเลือดที่แต่งงานด้วยไม่ได้ (เช่น พ่อแม่ พี่น้อง ป้า/น้า/อา)" },
+  },
+
+  // ── Funeral Rites (Janazah) ────────────────────────────
+  {
+    id: "q_jz1",
+    topic: "janazah",
+    question: { en: "What do Muslims say on hearing of a death?", th: "เมื่อได้ยินข่าวการเสียชีวิต มุสลิมกล่าวว่าอย่างไร?" },
+    options: {
+      en: ["Inna lillahi wa inna ilayhi raji'un", "Assalamu alaikum", "Bismillah", "Alhamdulillah", "Subhanallah"],
+      th: ["อินนาลิลลาฮิ วะอินนา อิลัยฮิรอญิอูน", "อัสสะลามุอะลัยกุม", "บิสมิลลาฮ", "อัลฮัมดุลิลลาฮ", "ซุบฮานัลลอฮ"],
+    },
+    correct: 0,
+    explanation: { en: "“Inna lillahi wa inna ilayhi raji'un” — indeed we belong to Allah and to Him we return.", th: "“อินนาลิลลาฮิ วะอินนา อิลัยฮิรอญิอูน” — เราเป็นกรรมสิทธิ์ของอัลลอฮ และยังพระองค์ที่เราต้องกลับไป" },
+  },
+  {
+    id: "q_jz2",
+    topic: "janazah",
+    question: { en: "Which is one of the four duties toward a deceased Muslim?", th: "ข้อใดเป็นหนึ่งในหน้าที่ 4 ประการต่อผู้เสียชีวิต?" },
+    options: {
+      en: ["Washing the body (ghusl)", "Cremating the body", "Keeping the body at home", "Embalming with chemicals", "Displaying the body for a week"],
+      th: ["การอาบน้ำศพ (ฆุสล)", "การเผาศพ", "การเก็บศพไว้ที่บ้าน", "การดองศพด้วยสารเคมี", "การตั้งศพให้ชมหนึ่งสัปดาห์"],
+    },
+    correct: 0,
+    explanation: { en: "The four duties are: wash, shroud, pray the funeral prayer, and bury the body.", th: "หน้าที่ 4 ประการ คือ อาบน้ำศพ ห่อศพ นมาซให้ศพ และฝังศพ" },
+  },
+  {
+    id: "q_jz3",
+    topic: "janazah",
+    question: { en: "How many takbir does the funeral prayer (Salatul Janazah) have?", th: "นมาซญะนาซะฮมีกี่ตักบีร?" },
+    options: { en: ["4", "2", "3", "5", "7"], th: ["4", "2", "3", "5", "7"] },
+    correct: 0,
+    explanation: { en: "The funeral prayer has 4 takbir, standing only — no ruku' and no sujud.", th: "นมาซญะนาซะฮมี 4 ตักบีร ทำในท่ายืนเท่านั้น ไม่มีรุกู้อและไม่มีสุญูด" },
+  },
+  {
+    id: "q_jz4",
+    topic: "janazah",
+    question: { en: "The funeral prayer is unusual because it has…", th: "นมาซญะนาซะฮพิเศษเพราะ…" },
+    options: {
+      en: ["No bowing (ruku') and no prostration (sujud)", "No standing", "No takbir", "Ten rak'ah", "Loud singing"],
+      th: ["ไม่มีการก้ม (รุกู้อ) และไม่มีการกราบ (สุญูด)", "ไม่มีการยืน", "ไม่มีตักบีร", "มี 10 ร็อกอัต", "มีการร้องเพลงเสียงดัง"],
+    },
+    correct: 0,
+    explanation: { en: "It is done standing with 4 takbir — there is no ruku' and no sujud.", th: "ทำในท่ายืนพร้อม 4 ตักบีร ไม่มีรุกู้อและไม่มีสุญูด" },
+  },
+  {
+    id: "q_jz5",
+    topic: "janazah",
+    question: { en: "A Muslim is buried in the grave…", th: "มุสลิมถูกฝังในหลุมอย่างไร?" },
+    options: {
+      en: ["On the right side, facing the qibla", "Face down", "Standing upright", "Facing east", "In a metal box facing up"],
+      th: ["ตะแคงขวา หันหน้าไปทางกิบลัต", "คว่ำหน้า", "ยืนตรง", "หันหน้าไปทางทิศตะวันออก", "ในกล่องโลหะหงายขึ้น"],
+    },
+    correct: 0,
+    explanation: { en: "The body is laid on its right side, facing the qibla, and buried soon.", th: "วางร่างตะแคงขวา หันหน้าไปทางกิบลัต และฝังโดยเร็ว" },
+  },
+  {
+    id: "q_jz6",
+    topic: "janazah",
+    question: { en: "Who washes a deceased woman's body?", th: "ใครเป็นผู้อาบน้ำศพผู้หญิง?" },
+    options: {
+      en: ["A woman (or her husband)", "Any man", "Only the imam", "A stranger", "No one — it is skipped"],
+      th: ["ผู้หญิง (หรือสามีของเธอ)", "ผู้ชายคนใดก็ได้", "อิมามเท่านั้น", "คนแปลกหน้า", "ไม่มีใคร — ข้ามขั้นตอนนี้"],
+    },
+    correct: 0,
+    explanation: { en: "A woman washes a woman and a man washes a man; spouses may wash each other.", th: "หญิงอาบให้หญิง ชายอาบให้ชาย ส่วนสามี-ภรรยาอาบให้กันได้" },
+  },
+  {
+    id: "q_jz7",
+    topic: "janazah",
+    question: { en: "What is a deceased male called?", th: "ศพผู้ชายเรียกว่าอะไร?" },
+    options: {
+      en: ["Mayyit", "Mayyitah", "Wali", "Mahram", "Kafan"],
+      th: ["มัยยิต", "มัยยิตะฮ", "วะลี", "มะฮ์รอม", "กะฝั่น"],
+    },
+    correct: 0,
+    explanation: { en: "A deceased male is “mayyit”; a deceased female is “mayyitah”.", th: "ศพผู้ชายเรียก “มัยยิต” ศพผู้หญิงเรียก “มัยยิตะฮ”" },
+  },
+
+  // ── Isra' & Mi'raj (Seerah) ────────────────────────────
+  {
+    id: "q_se11",
+    topic: "seerah",
+    question: { en: "The Isra' was the night journey from Makkah to…", th: "อิสรออ์คือการเดินทางยามค่ำคืนจากมักกะฮไปยัง…" },
+    options: {
+      en: ["Jerusalem (Masjid al-Aqsa)", "Madinah", "Taif", "Cairo", "Damascus"],
+      th: ["เยรูซาเล็ม (มัสยิดอัลอักซอ)", "มะดีนะฮ", "ฏออิฟ", "ไคโร", "ดามัสกัส"],
+    },
+    correct: 0,
+    explanation: { en: "The Isra' was the miraculous night journey from Makkah to Masjid al-Aqsa in Jerusalem.", th: "อิสรออ์คือการเดินทางอันเป็นปาฏิหาริย์ยามค่ำคืนจากมักกะฮสู่มัสยิดอัลอักซอในเยรูซาเล็ม" },
+  },
+  {
+    id: "q_se12",
+    topic: "seerah",
+    question: { en: "The Mi'raj was the Prophet's ascension through…", th: "เมี๊ยะอุรอจญ์คือการขึ้นสู่เบื้องบนของท่านนบีผ่าน…" },
+    options: {
+      en: ["The seven heavens", "A mountain cave", "The desert", "A great river", "The sea"],
+      th: ["ชั้นฟ้าทั้งเจ็ด", "ถ้ำบนภูเขา", "ทะเลทราย", "แม่น้ำใหญ่", "ทะเล"],
+    },
+    correct: 0,
+    explanation: { en: "In the Mi'raj the Prophet ﷺ ascended through the seven heavens, meeting earlier prophets.", th: "ในเมี๊ยะอุรอจญ์ ท่านนบีขึ้นผ่านชั้นฟ้าทั้งเจ็ด และได้พบบรรดานบีท่านก่อน" },
+  },
+  {
+    id: "q_se13",
+    topic: "seerah",
+    question: { en: "What was ordained during the Isra' & Mi'raj?", th: "สิ่งใดถูกกำหนดขึ้นในคืนอิสรออ์ เมี๊ยะอุรอจญ์?" },
+    options: {
+      en: ["The five daily prayers", "The fast of Ramadan", "Zakat", "Hajj", "The Friday prayer"],
+      th: ["การนมาซ 5 เวลา", "การถือศีลอดเราะมะฎอน", "ซะกาต", "ฮัจญ์", "นมาซวันศุกร์"],
+    },
+    correct: 0,
+    explanation: { en: "The five daily prayers were ordained — reduced from 50 to 5 by Allah's mercy.", th: "การนมาซ 5 เวลาถูกกำหนดขึ้น ลดจาก 50 เหลือ 5 ด้วยความเมตตาของอัลลอฮ" },
+  },
+  {
+    id: "q_se14",
+    topic: "seerah",
+    question: { en: "What was the name of the creature that carried the Prophet ﷺ on the night journey?", th: "สัตว์พาหนะที่พาท่านนบีในค่ำคืนอิสรออ์ชื่ออะไร?" },
+    options: {
+      en: ["Buraq", "Ababil", "Naqah", "Adha", "Rakhsh"],
+      th: ["บุร็อก", "อะบาบีล", "นาเกาะฮ", "อัฎฮา", "รัคช์"],
+    },
+    correct: 0,
+    explanation: { en: "The Buraq — a swift white creature — carried the Prophet ﷺ on the night journey.", th: "บุร็อก สัตว์สีขาววิ่งเร็ว พาท่านนบีในค่ำคืนอิสรออ์" },
+  },
+  {
+    id: "q_se15",
+    topic: "seerah",
+    question: { en: "The 5 daily prayers were first made 50, then reduced to…", th: "การนมาซเดิมกำหนด 50 เวลา แล้วลดเหลือ…" },
+    options: { en: ["5", "10", "17", "3", "25"], th: ["5 เวลา", "10 เวลา", "17 เวลา", "3 เวลา", "25 เวลา"] },
+    correct: 0,
+    explanation: { en: "By Allah's mercy the 50 prayers were reduced to 5 — still with the reward of 50.", th: "ด้วยความเมตตาของอัลลอฮ การนมาซ 50 เวลาถูกลดเหลือ 5 เวลา แต่ยังได้ผลบุญเท่า 50" },
+  },
+
+  // ── Salah — meaning & conditions ───────────────────────
+  {
+    id: "q_s14",
+    topic: "salah",
+    question: { en: "What is the first act a person will be questioned about on the Day of Judgment?", th: "สิ่งแรกที่มนุษย์จะถูกสอบสวนในวันพิพากษาคืออะไร?" },
+    options: {
+      en: ["Salah (prayer)", "Zakat", "Fasting", "Hajj", "Charity"],
+      th: ["การนมาซ (ละหมาด)", "ซะกาต", "การถือศีลอด", "ฮัจญ์", "การบริจาค"],
+    },
+    correct: 0,
+    explanation: { en: "The prayer (Salah) is the first act a person is questioned about after death.", th: "การนมาซเป็นสิ่งแรกที่มนุษย์จะถูกสอบสวนหลังความตาย" },
+  },
+  {
+    id: "q_s15",
+    topic: "salah",
+    question: { en: "Which is a condition for the prayer to be valid?", th: "ข้อใดเป็นเงื่อนไขให้การนมาซใช้ได้?" },
+    options: {
+      en: ["Body, clothes and place are clean of najis, and one faces the qibla", "Wearing only white", "Having eaten a full meal", "Reciting the whole Quran first", "Praying only at night"],
+      th: ["ร่างกาย เสื้อผ้า และสถานที่สะอาดจากนะญิส และหันหน้าสู่กิบลัต", "สวมชุดขาวเท่านั้น", "รับประทานอาหารอิ่มก่อน", "อ่านกุรอานจบทั้งเล่มก่อน", "ละหมาดเฉพาะกลางคืน"],
+    },
+    correct: 0,
+    explanation: { en: "Conditions include: being Muslim, at the right time, clean of najis, covering the awrah, and facing the qibla.", th: "เงื่อนไขได้แก่ เป็นมุสลิม ถึงเวลา สะอาดจากนะญิส ปกปิดเอาเราะฮ และหันหน้าสู่กิบลัต" },
+  },
+  {
+    id: "q_s16",
+    topic: "salah",
+    question: { en: "What is the deeper meaning of Salah?", th: "ความหมายที่ลึกซึ้งของการนมาซคืออะไร?" },
+    options: {
+      en: ["Worshipping and drawing close to Allah with the whole self", "A form of exercise", "A social gathering only", "A cultural custom with no meaning", "A way to earn money"],
+      th: ["การเคารพภักดีและเข้าใกล้อัลลอฮด้วยทั้งกายและใจ", "รูปแบบการออกกำลังกาย", "การรวมตัวทางสังคมเท่านั้น", "ธรรมเนียมที่ไม่มีความหมาย", "วิธีหาเงิน"],
+    },
+    correct: 0,
+    explanation: { en: "Salah is worship and connection with Allah — with the heart, tongue, hands and feet.", th: "การนมาซคือการเคารพภักดีและการเชื่อมสัมพันธ์กับอัลลอฮ ด้วยหัวใจ ลิ้น มือ และเท้า" },
+  },
 ];
 
 // Topics that actually have questions, in deck order, with their icon + title.

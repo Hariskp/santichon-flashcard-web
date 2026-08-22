@@ -1093,6 +1093,38 @@ export const decks: Deck[] = [
           th: "บรรดาสาวกที่ทันยุคท่านนบี ศรัทธาต่อท่าน และเสียชีวิตในสภาพมุสลิม",
         },
       },
+      {
+        id: "se12",
+        front: { en: "What was the Isra'?", th: "อิสรออ์คืออะไร?" },
+        back: {
+          en: "The Prophet's ﷺ miraculous night journey from the Sacred Mosque in Makkah to Masjid al-Aqsa in Jerusalem.",
+          th: "การเดินทางอันเป็นปาฏิหาริย์ของท่านนบียามค่ำคืน จากมัสยิดอัลฮะรอมในมักกะฮสู่มัสยิดอัลอักซอในเยรูซาเล็ม",
+        },
+      },
+      {
+        id: "se13",
+        front: { en: "What was the Mi'raj?", th: "เมี๊ยะอุรอจญ์คืออะไร?" },
+        back: {
+          en: "The Prophet's ascension from Jerusalem up through the seven heavens, meeting earlier prophets and reaching the highest station.",
+          th: "การเดินทางขึ้นสู่เบื้องบนของท่านนบีจากเยรูซาเล็มผ่านชั้นฟ้าทั้ง 7 พบบรรดานบีท่านก่อน ๆ และไปถึงชั้นสูงสุด",
+        },
+      },
+      {
+        id: "se14",
+        front: { en: "What was the Buraq?", th: "บุร็อกคืออะไร?" },
+        back: {
+          en: "A white creature — smaller than a mule but larger than a donkey — that carried the Prophet ﷺ on the night journey, swift as lightning.",
+          th: "สัตว์สีขาว เล็กกว่าม้าแต่ใหญ่กว่าลา ที่พาท่านนบีเดินทางในค่ำคืนนั้น วิ่งเร็วดั่งสายฟ้าแลบ",
+        },
+      },
+      {
+        id: "se15",
+        front: { en: "What was ordained during the Isra' & Mi'raj?", th: "สิ่งใดถูกกำหนดขึ้นในคืนอิสรออ์ เมี๊ยะอุรอจญ์?" },
+        back: {
+          en: "The five daily prayers — first made 50, then reduced by Allah's mercy to 5 (with the reward of 50). It took place on the 27th of Rajab.",
+          th: "การนมาซ 5 เวลา เดิมกำหนด 50 เวลา แล้วทรงลดเหลือ 5 เวลา (แต่ได้ผลบุญเท่า 50) เกิดขึ้นในวันที่ 27 เดือนรอญับ",
+        },
+      },
     ],
   },
 
@@ -1243,6 +1275,169 @@ export const decks: Deck[] = [
         back: {
           en: "Sadaqah is voluntary charity given any time; zakat is obligatory charity given at a set rate.",
           th: "ศอดะเกาะฮเป็นทานสมัครใจ ทำเมื่อใดก็ได้ ส่วนซะกาตเป็นทานบังคับตามอัตราที่กำหนด",
+        },
+      },
+    ],
+  },
+
+  // 17. MARRIAGE & FAMILY ─────────────────────────────────
+  {
+    id: "family",
+    icon: "💍",
+    title: { en: "Marriage & Family", th: "การแต่งงานและครอบครัว" },
+    description: {
+      en: "Islamic marriage, mahram, and divorce — rights and responsibilities.",
+      th: "การแต่งงาน มะฮ์รอม และการหย่าในอิสลาม สิทธิและหน้าที่",
+    },
+    cards: [
+      {
+        id: "fam1",
+        front: { en: "Why does Islam encourage marriage?", th: "ทำไมอิสลามส่งเสริมการแต่งงาน?" },
+        back: {
+          en: "To raise human morality, build a family and the foundation of civilization, and continue humankind in a lawful way.",
+          th: "เพื่อยกระดับศีลธรรมของมนุษย์ สร้างครอบครัวและวางรากฐานอารยธรรม และรักษาและขยายเผ่าพันธุ์มนุษย์อย่างถูกต้อง",
+        },
+      },
+      {
+        id: "fam2",
+        front: { en: "What are the conditions for a valid Islamic marriage?", th: "เงื่อนไขการแต่งงานที่ถูกต้องในอิสลามคืออะไร?" },
+        back: {
+          en: "Both are believing Muslims, the bride's guardian (wali) consents, there is a dowry (mahar), two witnesses of good character, and an offer and acceptance.",
+          th: "ทั้งเจ้าบ่าวและเจ้าสาวเป็นมุสลิมผู้ศรัทธา มีวะลี (ผู้ปกครองหญิง) ยินยอม มีสินสอด (มะฮัร) มีพยานผู้มีคุณธรรม 2 คน และมีคำเสนอและคำตอบรับ",
+        },
+      },
+      {
+        id: "fam3",
+        front: { en: "Give examples of women a man may never marry (mahram).", th: "ยกตัวอย่างหญิงที่ผู้ชายแต่งงานด้วยไม่ได้ (มะฮ์รอม)?" },
+        back: {
+          en: "His mother, his daughter, his sisters, his aunts, his nieces, his mother-in-law, and his son's wife — among others.",
+          th: "แม่ของตัวเอง ลูกสาว พี่สาว/น้องสาว ป้า/น้า/อา หลานสาว แม่ยาย และภรรยาของลูกชาย เป็นต้น",
+        },
+      },
+      {
+        id: "fam4",
+        front: { en: "How many wives may a man have, and on what condition?", th: "ผู้ชายมีภรรยาได้กี่คน และมีเงื่อนไขใด?" },
+        back: {
+          en: "Up to four, but only if he can treat them with complete fairness. If he cannot, he marries only one (Quran 4:3, 4:129).",
+          th: "ไม่เกิน 4 คน แต่ต้องให้ความยุติธรรมเท่าเทียมกันได้ทุกด้าน หากทำไม่ได้ ให้แต่งเพียงคนเดียว (กุรอาน 4:3, 4:129)",
+        },
+      },
+      {
+        id: "fam5",
+        front: { en: "What are the husband's main duties?", th: "หน้าที่หลักของสามีคืออะไร?" },
+        back: {
+          en: "Be faithful, provide for and care for the family (food, clothing, education), give love, protect the family, and keep good ties with her relatives.",
+          th: "ซื่อสัตย์ต่อภรรยา รับผิดชอบเลี้ยงดูครอบครัว (อาหาร เสื้อผ้า การศึกษา) ให้ความรัก ปกป้องครอบครัว และรักษาความสัมพันธ์กับเครือญาติของภรรยา",
+        },
+      },
+      {
+        id: "fam6",
+        front: { en: "What are the wife's main duties?", th: "หน้าที่หลักของภรรยาคืออะไร?" },
+        back: {
+          en: "Be faithful, obey in what does not oppose religion, care for the home and children, guard his secrets/honor/property, and keep good ties with his relatives.",
+          th: "ซื่อสัตย์ต่อสามี เชื่อฟังในสิ่งที่ไม่ขัดต่อศาสนา รับผิดชอบงานบ้านและเลี้ยงลูก รักษาความลับ เกียรติ และทรัพย์สินของสามี และรักษาความสัมพันธ์กับเครือญาติของสามี",
+        },
+      },
+      {
+        id: "fam7",
+        front: { en: "What is talaq (divorce) in Islam?", th: "ฏอลาก (การหย่า) ในอิสลามคืออะไร?" },
+        back: {
+          en: "The ending of the marriage. It is permitted (halal) but the most disliked of lawful things to Allah — so Islam sets careful rules to avoid it.",
+          th: "การยุติการสมรส เป็นสิ่งที่อนุญาต (ฮาลาล) แต่เป็นสิ่งที่อัลลอฮไม่ชอบมากที่สุดในสิ่งที่อนุมัติ อิสลามจึงกำหนดกฎเกณฑ์อย่างละเอียดเพื่อหลีกเลี่ยง",
+        },
+      },
+      {
+        id: "fam8",
+        front: { en: "What is the iddah?", th: "อิดดะฮคืออะไร?" },
+        back: {
+          en: "A woman's waiting period after divorce or her husband's death — about 3 monthly cycles (or 4 months and 10 days if widowed) — to confirm no pregnancy and allow reconciliation.",
+          th: "ช่วงเวลารอคอยของฝ่ายหญิงหลังหย่าหรือสามีเสียชีวิต ประมาณ 3 รอบประจำเดือน (หรือ 4 เดือน 10 วันหากเป็นหม้าย) เพื่อให้แน่ใจว่าไม่มีครรภ์และเปิดโอกาสคืนดี",
+        },
+      },
+      {
+        id: "fam9",
+        front: { en: "What are the two main types of divorce?", th: "การหย่ามีสองประเภทหลักอะไรบ้าง?" },
+        back: {
+          en: "Raj'i (revocable) — the husband may return within the iddah without a new contract; and Ba'in (irrevocable).",
+          th: "ฏอลากรอจญอี (หย่ากลับคืนได้) สามีคืนดีได้ภายในอิดดะฮโดยไม่ต้องแต่งใหม่ และฏอลากบาอิน (หย่าขาด คืนไม่ได้)",
+        },
+      },
+    ],
+  },
+
+  // 18. FUNERAL RITES (JANAZAH) ───────────────────────────
+  {
+    id: "janazah",
+    icon: "🕊️",
+    title: { en: "Funeral Rites (Janazah)", th: "การจัดการศพ (ญะนาซะฮ)" },
+    description: {
+      en: "What Muslims do when someone passes away, step by step.",
+      th: "สิ่งที่มุสลิมปฏิบัติเมื่อมีผู้เสียชีวิต ทีละขั้นตอน",
+    },
+    cards: [
+      {
+        id: "jz1",
+        front: { en: "What do Muslims say on hearing of a death?", th: "เมื่อได้ยินข่าวการเสียชีวิต มุสลิมกล่าวว่าอย่างไร?" },
+        back: {
+          en: "“Inna lillahi wa inna ilayhi raji'un” — “Indeed we belong to Allah, and to Him we shall return.”",
+          th: "“อินนาลิลลาฮิ วะอินนา อิลัยฮิรอญิอูน” — “เราเป็นกรรมสิทธิ์ของอัลลอฮ และยังพระองค์ที่เราต้องกลับไป”",
+        },
+        arabic: "Innā lillāhi wa innā ilayhi rājiʿūn",
+      },
+      {
+        id: "jz2",
+        front: { en: "What are the four communal duties toward a deceased Muslim?", th: "หน้าที่ 4 ประการต่อผู้เสียชีวิตที่เป็นมุสลิมคืออะไร?" },
+        back: {
+          en: "1) Wash the body (ghusl), 2) shroud it (kafan), 3) pray the funeral prayer (Salatul Janazah), and 4) bury it. These are fard kifayah (a communal obligation).",
+          th: "1) อาบน้ำศพ (ฆุสล) 2) ห่อศพ (กะฝั่น) 3) นมาซขอพรให้ศพ (นมาซญะนาซะฮ) และ 4) ฝังศพ ถือเป็นฟัรฎูกิฟายะฮ (หน้าที่ส่วนรวม)",
+        },
+      },
+      {
+        id: "jz3",
+        front: { en: "What is a deceased male and female each called?", th: "ศพผู้ชายและผู้หญิงเรียกว่าอะไร?" },
+        back: {
+          en: "A deceased male is called “mayyit”; a deceased female is called “mayyitah.”",
+          th: "ศพผู้ชายเรียกว่า “มัยยิต” ศพผู้หญิงเรียกว่า “มัยยิตะฮ”",
+        },
+      },
+      {
+        id: "jz4",
+        front: { en: "How is the funeral prayer (Salatul Janazah) different from a normal prayer?", th: "นมาซญะนาซะฮต่างจากนมาซปกติอย่างไร?" },
+        back: {
+          en: "It has four takbir and is performed standing only — with no ruku' (bowing) and no sujud (prostration).",
+          th: "มี 4 ตักบีร และทำในท่ายืนเท่านั้น ไม่มีรุกู้อ (ก้มโค้ง) และไม่มีสุญูด (กราบ)",
+        },
+      },
+      {
+        id: "jz5",
+        front: { en: "What is the purpose of the funeral prayer?", th: "จุดประสงค์ของนมาซญะนาซะฮคืออะไร?" },
+        back: {
+          en: "It is a supplication asking Allah's forgiveness and mercy for the deceased.",
+          th: "เป็นการวิงวอนขอการอภัยโทษและความเมตตาจากอัลลอฮให้แก่ผู้เสียชีวิต",
+        },
+      },
+      {
+        id: "jz6",
+        front: { en: "Who washes the deceased?", th: "ใครเป็นผู้อาบน้ำศพ?" },
+        back: {
+          en: "A man washes a man, and a woman washes a woman; a husband and wife may wash one another.",
+          th: "ชายอาบให้ชาย หญิงอาบให้หญิง ส่วนสามี-ภรรยาอาบน้ำให้กันได้",
+        },
+      },
+      {
+        id: "jz7",
+        front: { en: "How is a Muslim buried?", th: "มุสลิมถูกฝังอย่างไร?" },
+        back: {
+          en: "The body is buried soon, laid in the grave on its right side, facing the qibla.",
+          th: "ฝังโดยเร็ว วางร่างในหลุมตะแคงขวา หันหน้าไปทางกิบลัต",
+        },
+      },
+      {
+        id: "jz8",
+        front: { en: "Can you pray the funeral prayer for someone who died far away?", th: "สามารถนมาซญะนาซะฮให้ผู้ที่เสียชีวิตอยู่ไกลได้หรือไม่?" },
+        back: {
+          en: "Yes — the “ghaib” (absent) funeral prayer can be offered for a deceased who is elsewhere or already buried, facing the qibla.",
+          th: "ได้ — นมาซขอเฆ็บ (นมาซให้ศพที่อยู่ห่างไกล) ทำได้สำหรับผู้เสียชีวิตที่อยู่ที่อื่นหรือถูกฝังไปแล้ว โดยหันหน้าไปทางกิบลัต",
         },
       },
     ],

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { type Lang } from "@/lib/decks";
 import Header, { type Mode, type Theme } from "./Header";
+import ShahadaSection from "./ShahadaSection";
 import FlashcardsSection from "./FlashcardsSection";
 import QuizSection from "./QuizSection";
 import SolatSection from "./SolatSection";
@@ -15,7 +16,7 @@ export default function AppShell() {
   const [mounted, setMounted] = useState(false);
   const [lang, setLang] = useState<Lang>("en");
   const [theme, setTheme] = useState<Theme>("system");
-  const [mode, setMode] = useState<Mode>("cards");
+  const [mode, setMode] = useState<Mode>("shahada");
 
   useEffect(() => {
     setMounted(true);
@@ -25,7 +26,7 @@ export default function AppShell() {
       const t = localStorage.getItem(THEME_KEY) as Theme | null;
       if (t === "light" || t === "dark" || t === "system") setTheme(t);
       const m = localStorage.getItem(MODE_KEY) as Mode | null;
-      if (m === "cards" || m === "quiz" || m === "salah") setMode(m);
+      if (m === "shahada" || m === "cards" || m === "quiz" || m === "salah") setMode(m);
     } catch {
       /* ignore */
     }
@@ -59,7 +60,9 @@ export default function AppShell() {
         setMode={setMode}
       />
       <main className="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
-        {mode === "cards" ? (
+        {mode === "shahada" ? (
+          <ShahadaSection lang={lang} />
+        ) : mode === "cards" ? (
           <FlashcardsSection lang={lang} />
         ) : mode === "quiz" ? (
           <QuizSection lang={lang} />
