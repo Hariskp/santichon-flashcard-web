@@ -910,6 +910,343 @@ export const decks: Deck[] = [
       },
     ],
   },
+
+  // 13. CORE BELIEFS (AQIDAH) ─────────────────────────────
+  {
+    id: "creed",
+    icon: "☝️",
+    title: { en: "Core Beliefs (Aqidah)", th: "หลักความเชื่อ (อากีดะฮ)" },
+    description: {
+      en: "Key creed concepts: Tawhid, Ihsan, the angels, and the Hereafter.",
+      th: "แนวคิดสำคัญของความเชื่อ: เตาฮีด อิห์ซาน มลาอิกะฮ และโลกหน้า",
+    },
+    cards: [
+      {
+        id: "cr1",
+        front: { en: "What is Tawhid?", th: "เตาฮีดคืออะไร?" },
+        back: {
+          en: "Belief in the absolute Oneness of Allah — worshipping Him alone, sincerely, with no partners. It is the heart of Islam.",
+          th: "การศรัทธาในความเป็นเอกะของอัลลอฮ เคารพภักดีพระองค์เพียงองค์เดียวอย่างบริสุทธิ์ใจ โดยไม่มีสิ่งใดเป็นภาคี เป็นหัวใจของอิสลาม",
+        },
+      },
+      {
+        id: "cr2",
+        front: { en: "What is Shirk?", th: "ชิริกคืออะไร?" },
+        back: {
+          en: "Associating partners with Allah or worshipping something besides Him — the gravest sin in Islam.",
+          th: "การตั้งภาคีหรือนำสิ่งอื่นมาตีเสมออัลลอฮ ถือเป็นบาปใหญ่ที่สุดในอิสลาม",
+        },
+      },
+      {
+        id: "cr3",
+        front: { en: "What is Ihsan?", th: "อิห์ซานคืออะไร?" },
+        back: {
+          en: "To worship Allah as if you see Him — and though you do not see Him, He surely sees you. It is the highest level of faith.",
+          th: "การเคารพภักดีอัลลอฮเสมือนว่าเราเห็นพระองค์ และแม้เราไม่เห็นพระองค์ แต่พระองค์ทรงเห็นเราเสมอ เป็นระดับสูงสุดของศรัทธา",
+        },
+      },
+      {
+        id: "cr4",
+        front: { en: "Why did Allah create jinn and mankind?", th: "อัลลอฮทรงสร้างญินและมนุษย์เพื่ออะไร?" },
+        back: {
+          en: "To worship Him alone. The Quran (51:56) says: “I did not create jinn and mankind except to worship Me.”",
+          th: "เพื่อเคารพภักดีต่อพระองค์เพียงผู้เดียว กุรอาน (51:56) กล่าวว่า “ข้ามิได้สร้างญินและมนุษย์เพื่ออื่นใด เว้นแต่เพื่อภักดีต่อข้า”",
+        },
+      },
+      {
+        id: "cr5",
+        front: { en: "How many beautiful names does Allah have?", th: "อัลลอฮทรงมีพระนามอันวิจิตรกี่พระนาม?" },
+        back: {
+          en: "99 beautiful names — Al-Asma’ul-Husna.",
+          th: "99 พระนาม เรียกว่า อัลอัสมาอุลฮุสนา",
+        },
+      },
+      {
+        id: "cr6",
+        front: { en: "Which angels record our good and bad deeds?", th: "มลาอิกะฮองค์ใดบันทึกความดีและความชั่วของเรา?" },
+        back: {
+          en: "Raqib records good deeds (on the right) and Atid records bad deeds (on the left).",
+          th: "รอกีบบันทึกความดี (ด้านขวา) และอะตีดบันทึกความชั่ว (ด้านซ้าย)",
+        },
+      },
+      {
+        id: "cr7",
+        front: { en: "Which angel will blow the trumpet on the Last Day?", th: "มลาอิกะฮองค์ใดเป่าแตรสังข์ในวันสิ้นโลก?" },
+        back: {
+          en: "Israfil — once to end the world, and a second time for the resurrection.",
+          th: "อิสรอฟีล เป่าครั้งแรกเพื่อจบสิ้นโลก และครั้งที่สองเพื่อการฟื้นคืนชีพ",
+        },
+      },
+      {
+        id: "cr8",
+        front: { en: "What is Barzakh?", th: "บัรซัคคืออะไร?" },
+        back: {
+          en: "The realm of the grave and the souls, in between this world and the Day of Resurrection.",
+          th: "โลกแห่งดวงวิญญาณในกุโบร์ (หลุมศพ) ที่คั่นระหว่างโลกนี้กับวันฟื้นคืนชีพ",
+        },
+      },
+      {
+        id: "cr9",
+        front: { en: "What is Yawmul Qiyamah?", th: "เยามุลกิยามะฮคืออะไร?" },
+        back: {
+          en: "The Day of Resurrection — the Last Day, when all people are raised and judged.",
+          th: "วันแห่งการฟื้นคืนชีพหรือวันสิ้นโลก ที่มนุษย์ทุกคนถูกให้ฟื้นขึ้นและถูกพิพากษา",
+        },
+      },
+      {
+        id: "cr10",
+        front: { en: "What is As-Sirat?", th: "อัศศิรอตคืออะไร?" },
+        back: {
+          en: "The bridge over Hell that everyone must cross on the Last Day, according to their deeds.",
+          th: "สะพานที่พาดผ่านนรก ซึ่งทุกคนต้องเดินข้ามในวันสิ้นโลกตามระดับความดีความชั่วของตน",
+        },
+      },
+      {
+        id: "cr11",
+        front: { en: "What is Shafa'ah?", th: "ชะฟาอะฮคืออะไร?" },
+        back: {
+          en: "The intercession of the Prophet ﷺ — asking Allah's forgiveness and help for the believers on the Day of Judgment.",
+          th: "การที่ท่านนบีขอการอภัยโทษและช่วยเหลือผู้ศรัทธาต่ออัลลอฮในวันตอบแทน",
+        },
+      },
+    ],
+  },
+
+  // 14. LIFE OF THE PROPHET ﷺ (SEERAH) ────────────────────
+  {
+    id: "seerah",
+    icon: "📜",
+    title: { en: "Life of the Prophet ﷺ", th: "ประวัติท่านนบี (ซีเราะฮ)" },
+    description: {
+      en: "Key moments from the life of Prophet Muhammad ﷺ and his companions.",
+      th: "เหตุการณ์สำคัญในชีวิตของท่านนบีมุฮัมมัดและเหล่าสาวก",
+    },
+    cards: [
+      {
+        id: "se1",
+        front: { en: "What title did Muhammad ﷺ earn in his youth?", th: "ท่านนบีมุฮัมมัดได้รับฉายาในวัยหนุ่มว่าอะไร?" },
+        back: { en: "Al-Amin — “the trustworthy, the reliable.”", th: "อัลอะมีน — “ผู้ซื่อสัตย์ ไว้วางใจได้”" },
+      },
+      {
+        id: "se2",
+        front: { en: "Where did the Prophet ﷺ receive the first revelation?", th: "ท่านนบีได้รับโองการครั้งแรกที่ใด?" },
+        back: {
+          en: "In the cave of Hira, on the Mountain of Light (Jabal an-Nur), near Makkah.",
+          th: "ในถ้ำฮิรออ์ บนภูเขานูร ใกล้นครมักกะฮ",
+        },
+      },
+      {
+        id: "se3",
+        front: { en: "What was the first word of the Quran revealed?", th: "คำแรกของอัลกุรอานที่ถูกประทานลงมาคือคำใด?" },
+        back: { en: "“Iqra” — “Read!”", th: "“อิกเราะอ์” — “จงอ่าน!”" },
+        arabic: "Iqraʾ",
+      },
+      {
+        id: "se4",
+        front: { en: "Who was the Prophet's first wife and the first person to accept Islam?", th: "ภรรยาคนแรกและผู้รับอิสลามคนแรกคือใคร?" },
+        back: { en: "Khadijah bint Khuwaylid.", th: "นางเคาะดีญะฮ บินติ คุวัยลิด" },
+      },
+      {
+        id: "se5",
+        front: { en: "What is the Hijrah?", th: "ฮิจเราะฮคืออะไร?" },
+        back: {
+          en: "The Prophet's migration from Makkah to Madinah — it marks the start of the Islamic calendar.",
+          th: "การอพยพของท่านนบีจากมักกะฮไปยังมะดีนะฮ ซึ่งเป็นจุดเริ่มต้นของปฏิทินอิสลาม",
+        },
+      },
+      {
+        id: "se6",
+        front: { en: "Who were the Muhajirin and the Ansar?", th: "มุฮาญิรีนและอันศอรคือใคร?" },
+        back: {
+          en: "The Muhajirin migrated from Makkah; the Ansar were the “helpers” of Madinah who welcomed and supported them.",
+          th: "มุฮาญิรีนคือผู้อพยพจากมักกะฮ ส่วนอันศอรคือ “ผู้ช่วยเหลือ” ชาวมะดีนะฮที่ต้อนรับและช่วยเหลือพวกเขา",
+        },
+      },
+      {
+        id: "se7",
+        front: { en: "What was the first battle between the Muslims and the Makkans?", th: "สงครามครั้งแรกระหว่างมุสลิมกับชาวกุเรชมักกะฮคือสงครามใด?" },
+        back: { en: "The Battle of Badr.", th: "สงครามบัดร์" },
+      },
+      {
+        id: "se8",
+        front: { en: "What was the peaceful conquest of Makkah called?", th: "การพิชิตนครมักกะฮโดยปราศจากการนองเลือดเรียกว่าอะไร?" },
+        back: {
+          en: "Fath Makkah — the Prophet ﷺ entered Makkah without bloodshed.",
+          th: "ฟัตฮุมักกะฮ — ท่านนบีเข้าสู่มักกะฮโดยปราศจากการนองเลือด",
+        },
+      },
+      {
+        id: "se9",
+        front: { en: "At what age, and where, did the Prophet ﷺ pass away?", th: "ท่านนบีสิ้นชีวิตเมื่ออายุเท่าใดและที่เมืองใด?" },
+        back: { en: "At age 63, in Madinah.", th: "อายุ 63 ปี ที่เมืองมะดีนะฮ" },
+      },
+      {
+        id: "se10",
+        front: { en: "Who was the first caliph after the Prophet ﷺ?", th: "ผู้นำ (เคาะลีฟะฮ) คนแรกหลังท่านนบีคือใคร?" },
+        back: { en: "Abu Bakr as-Siddiq.", th: "ท่านอบูบักร อัศศิดดีก" },
+      },
+      {
+        id: "se11",
+        front: { en: "Who are the Sahabah?", th: "ศ่อฮาบะฮคือใคร?" },
+        back: {
+          en: "The companions who met the Prophet ﷺ, believed in him, and died as Muslims.",
+          th: "บรรดาสาวกที่ทันยุคท่านนบี ศรัทธาต่อท่าน และเสียชีวิตในสภาพมุสลิม",
+        },
+      },
+    ],
+  },
+
+  // 15. STORIES OF THE PROPHETS ───────────────────────────
+  {
+    id: "prophets-stories",
+    icon: "🌟",
+    title: { en: "Stories of the Prophets", th: "เรื่องราวบรรดานบี" },
+    description: {
+      en: "Famous prophets and the events they are known for.",
+      th: "บรรดานบีที่มีชื่อเสียงและเหตุการณ์สำคัญของแต่ละท่าน",
+    },
+    cards: [
+      {
+        id: "ps1",
+        front: { en: "Who were the first man and woman?", th: "ผู้ชายและผู้หญิงคนแรกของโลกคือใคร?" },
+        back: { en: "Prophet Adam and his wife Hawwa (Eve).", th: "นบีอาดัม และนางฮาวา (อีฟ) ผู้เป็นคู่ครอง" },
+      },
+      {
+        id: "ps2",
+        front: { en: "Who refused, out of arrogance, to prostrate to Adam?", th: "ผู้ใดปฏิเสธการคารวะ (สุญูด) ต่ออาดัมด้วยความเย่อหยิ่ง?" },
+        back: { en: "Iblis (Satan).", th: "อิบลีส (มารร้าย)" },
+      },
+      {
+        id: "ps3",
+        front: { en: "Which prophet built a great ark to survive the flood?", th: "นบีท่านใดสร้างเรือใหญ่เพื่อรอดจากน้ำท่วมโลก?" },
+        back: { en: "Prophet Nuh (Noah).", th: "นบีนูฮ (โนอาห์)" },
+      },
+      {
+        id: "ps4",
+        front: { en: "Who first built the Kaaba?", th: "ใครเป็นผู้สร้างกะอบะฮครั้งแรก?" },
+        back: { en: "Prophet Ibrahim and his son Ismail.", th: "นบีอิบรอฮีมและนบีอิสมาอีลผู้เป็นบุตร" },
+      },
+      {
+        id: "ps5",
+        front: { en: "Which prophet parted the Red Sea to escape Pharaoh?", th: "นบีท่านใดแหวกทะเลแดงเพื่อหนีจากฟาโรห์?" },
+        back: { en: "Prophet Musa (Moses).", th: "นบีมูซา (โมเสส)" },
+      },
+      {
+        id: "ps6",
+        front: { en: "Which prophet was thrown into a well by his brothers and later became a minister in Egypt?", th: "นบีท่านใดถูกพี่ชายโยนลงบ่อน้ำ แต่ต่อมาได้เป็นเสนาบดีแห่งอียิปต์?" },
+        back: { en: "Prophet Yusuf (Joseph).", th: "นบียูซุฟ (โจเซฟ)" },
+      },
+      {
+        id: "ps7",
+        front: { en: "Which prophet was swallowed by a great fish?", th: "นบีท่านใดถูกขังอยู่ในท้องปลาใหญ่?" },
+        back: { en: "Prophet Yunus (Jonah).", th: "นบียูนุส (โยนาห์)" },
+      },
+      {
+        id: "ps8",
+        front: { en: "Which prophet could understand animals and ruled over the jinn?", th: "นบีท่านใดฟังภาษาสัตว์ได้และปกครองมวลญิน?" },
+        back: { en: "Prophet Sulaiman (Solomon).", th: "นบีสุลัยมาน (โซโลมอน)" },
+      },
+      {
+        id: "ps9",
+        front: { en: "Who was the pure mother of Prophet Isa (Jesus)?", th: "มารดาผู้บริสุทธิ์ของนบีอีซา (เยซู) คือใคร?" },
+        back: { en: "Maryam (Mary), honored in the Quran for her purity.", th: "นางมารียัม (แมรี่) ผู้ได้รับการยกย่องในกุรอานว่าบริสุทธิ์" },
+      },
+    ],
+  },
+
+  // 16. MANNERS & ETIQUETTE (ADAB) ────────────────────────
+  {
+    id: "adab",
+    icon: "💐",
+    title: { en: "Manners & Etiquette (Adab)", th: "มารยาทและการปฏิบัติ (อาดับ)" },
+    description: {
+      en: "Everyday Islamic manners: eating, greeting, sneezing, and more.",
+      th: "มารยาทอิสลามในชีวิตประจำวัน: การกิน การทักทาย การจาม และอื่น ๆ",
+    },
+    cards: [
+      {
+        id: "ad1",
+        front: { en: "How should a Muslim eat, following the Sunnah?", th: "มุสลิมควรรับประทานอาหารอย่างไรตามซุนนะฮ?" },
+        back: {
+          en: "With the right hand, starting with “Bismillah”, and saying “Alhamdulillah” when finished.",
+          th: "รับประทานด้วยมือขวา เริ่มด้วย “บิสมิลลาฮ” และกล่าว “อัลฮัมดุลิลลาฮ” เมื่อเสร็จ",
+        },
+      },
+      {
+        id: "ad2",
+        front: { en: "What do you say when you sneeze, and how does the listener reply?", th: "เมื่อจามควรกล่าวคำใด และผู้ได้ยินตอบว่าอย่างไร?" },
+        back: {
+          en: "The sneezer says “Alhamdulillah”; the listener replies “Yarhamukallah” (may Allah have mercy on you).",
+          th: "ผู้จามกล่าว “อัลฮัมดุลิลลาฮ” และผู้ได้ยินตอบ “ยัรฮะมุกัลลอฮ” (ขออัลลอฮทรงเมตตาท่าน)",
+        },
+      },
+      {
+        id: "ad3",
+        front: { en: "How serious is backbiting (ghibah)?", th: "การนินทา (ฆีบะฮ) ร้ายแรงเพียงใด?" },
+        back: {
+          en: "The Quran compares it to eating the flesh of your dead brother — it is forbidden.",
+          th: "กุรอานเปรียบเทียบว่าเหมือนการกินเนื้อพี่น้องของตนที่ตายไปแล้ว เป็นสิ่งต้องห้าม",
+        },
+      },
+      {
+        id: "ad4",
+        front: { en: "What reward does smiling at your brother carry?", th: "การยิ้มให้พี่น้องมุสลิมมีผลบุญเทียบเท่าสิ่งใด?" },
+        back: {
+          en: "It is counted as an act of charity (sadaqah).",
+          th: "ถือเป็นการบริจาคทาน (ศอดะเกาะฮ) อย่างหนึ่ง",
+        },
+      },
+      {
+        id: "ad5",
+        front: { en: "What do you say when you hear the Prophet's ﷺ name?", th: "เมื่อได้ยินพระนามของท่านนบี ควรกล่าวคำใด?" },
+        back: {
+          en: "“Sallallahu alayhi wa sallam” — may Allah's blessings and peace be upon him.",
+          th: "“ศ็อลลัลลอฮุ อะลัยฮิ วะซัลลัม” — ขออัลลอฮทรงอำนวยพรและความสันติแก่ท่าน",
+        },
+        arabic: "Ṣallallāhu ʿalayhi wa sallam",
+      },
+      {
+        id: "ad6",
+        front: { en: "What is the etiquette of visiting the sick?", th: "มารยาทในการเยี่ยมผู้ป่วยคืออะไร?" },
+        back: {
+          en: "Make dua for their recovery, and don't stay so long that you disturb their rest.",
+          th: "ขอดุอาอ์ให้เขาหายป่วย และไม่อยู่นานเกินไปจนรบกวนการพักผ่อน",
+        },
+      },
+      {
+        id: "ad7",
+        front: { en: "How does Islam teach us to treat neighbors, even of other faiths?", th: "อิสลามสอนให้ปฏิบัติต่อเพื่อนบ้าน แม้ต่างศาสนา อย่างไร?" },
+        back: {
+          en: "Help them, honor them, share food, and live together in peace.",
+          th: "ให้ความช่วยเหลือ ให้เกียรติ แบ่งปันอาหาร และอยู่ร่วมกันด้วยความสันติ",
+        },
+      },
+      {
+        id: "ad8",
+        front: { en: "What is the manner of entering someone's home?", th: "มารยาทในการเข้าบ้านผู้อื่นคืออะไร?" },
+        back: {
+          en: "Give salam, ask permission, and do not stare inside until you are allowed in.",
+          th: "ให้สลาม ขออนุญาต และไม่จ้องมองเข้าไปในบ้านจนกว่าจะได้รับอนุญาต",
+        },
+      },
+      {
+        id: "ad9",
+        front: { en: "What is Islamic marriage called, and what is the mahar?", th: "การแต่งงานในอิสลามเรียกว่าอะไร และมะฮัรคืออะไร?" },
+        back: {
+          en: "Marriage is Nikah; the mahar is the gift/dowry the groom gives the bride, which becomes her own right.",
+          th: "การแต่งงานเรียกว่านิกาห์ ส่วนมะฮัรคือของขวัญ/สินสอดที่ฝ่ายชายมอบให้ฝ่ายหญิง ซึ่งเป็นสิทธิ์ของเธอ",
+        },
+      },
+      {
+        id: "ad10",
+        front: { en: "How does sadaqah differ from zakat?", th: "ศอดะเกาะฮต่างจากซะกาตอย่างไร?" },
+        back: {
+          en: "Sadaqah is voluntary charity given any time; zakat is obligatory charity given at a set rate.",
+          th: "ศอดะเกาะฮเป็นทานสมัครใจ ทำเมื่อใดก็ได้ ส่วนซะกาตเป็นทานบังคับตามอัตราที่กำหนด",
+        },
+      },
+    ],
+  },
 ];
 
 export const uiText = {

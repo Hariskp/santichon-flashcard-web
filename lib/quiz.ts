@@ -1197,6 +1197,448 @@ export const quiz: QuizQuestion[] = [
     correct: 0,
     explanation: { en: "“Alhamdulillah” (all praise is for Allah) is said to give thanks or on good news.", th: "“อัลฮัมดุลิลลาฮ” (การสรรเสริญเป็นของอัลลอฮ) กล่าวเพื่อขอบคุณหรือเมื่อได้ข่าวดี" },
   },
+
+  // ── Core Beliefs (Aqidah) ──────────────────────────────
+  {
+    id: "q_cr1",
+    topic: "creed",
+    question: { en: "What does “Tawhid” mean?", th: "“เตาฮีด” หมายถึงอะไร?" },
+    options: {
+      en: ["Sincere worship of the one God alone", "Reciting the Quran daily", "Performing Hajj yearly", "Respecting one's teachers", "Giving charity"],
+      th: ["การเคารพภักดีพระเจ้าองค์เดียวอย่างบริสุทธิ์ใจ", "การอ่านกุรอานทุกวัน", "การทำฮัจญ์ทุกปี", "การเคารพครูบาอาจารย์", "การบริจาคทาน"],
+    },
+    correct: 0,
+    explanation: { en: "Tawhid is the heart of Islam — believing in and worshipping Allah alone, with no partners.", th: "เตาฮีดคือหัวใจของอิสลาม การศรัทธาและเคารพภักดีอัลลอฮเพียงองค์เดียว โดยไม่มีภาคี" },
+  },
+  {
+    id: "q_cr2",
+    topic: "creed",
+    question: { en: "What is Shirk?", th: "ชิริกคืออะไร?" },
+    options: {
+      en: ["Associating partners with Allah", "Lying on purpose", "Missing zakat", "Insulting others", "Breaking a promise"],
+      th: ["การตั้งภาคีต่ออัลลอฮ", "การโกหกโดยเจตนา", "การละเลยซะกาต", "การด่าทอผู้อื่น", "การผิดสัญญา"],
+    },
+    correct: 0,
+    explanation: { en: "Shirk — associating partners with Allah — is the gravest sin in Islam.", th: "ชิริก การตั้งภาคีต่ออัลลอฮ เป็นบาปใหญ่ที่สุดในอิสลาม" },
+  },
+  {
+    id: "q_cr3",
+    topic: "creed",
+    question: { en: "The Day of Resurrection is called…", th: "วันแห่งการฟื้นคืนชีพเรียกว่าอะไร?" },
+    options: {
+      en: ["Yawmul Qiyamah", "Yawmul Jumu'ah", "Yawmul Arafah", "Yawmul Hijrah", "Laylatul Qadr"],
+      th: ["เยามุลกิยามะฮ", "เยามุลญุมอะฮ", "เยามุลอาเราะฟะฮ", "เยามุลฮิจเราะฮ", "ลัยละตุลก็อดร์"],
+    },
+    correct: 0,
+    explanation: { en: "Yawmul Qiyamah is the Day of Resurrection — the Last Day.", th: "เยามุลกิยามะฮ คือวันฟื้นคืนชีพหรือวันสิ้นโลก" },
+  },
+  {
+    id: "q_cr4",
+    topic: "creed",
+    question: { en: "The realm of the grave before the Last Day is called…", th: "แดนของหลุมฝังศพก่อนถึงวันสิ้นโลกเรียกว่าอะไร?" },
+    options: {
+      en: ["Barzakh", "Akhirah", "Mahshar", "Sirat", "Jannah"],
+      th: ["บัรซัค", "อาคิเราะฮ", "มะฮ์ชัร", "ศิรอต", "ญันนะฮ"],
+    },
+    correct: 0,
+    explanation: { en: "Barzakh is the realm of the souls in the grave, between this life and the resurrection.", th: "บัรซัคคือโลกแห่งดวงวิญญาณในหลุมศพ คั่นระหว่างโลกนี้กับการฟื้นคืนชีพ" },
+  },
+  {
+    id: "q_cr5",
+    topic: "creed",
+    question: { en: "How many beautiful names (Al-Asma'ul-Husna) does Allah have?", th: "อัลลอฮทรงมีพระนามอันวิจิตร (อัลอัสมาอุลฮุสนา) กี่พระนาม?" },
+    options: { en: ["99", "33", "66", "100", "40"], th: ["99", "33", "66", "100", "40"] },
+    correct: 0,
+    explanation: { en: "Allah has 99 beautiful names — Al-Asma'ul-Husna.", th: "อัลลอฮทรงมีพระนามอันงดงาม 99 พระนาม เรียกว่าอัลอัสมาอุลฮุสนา" },
+  },
+  {
+    id: "q_cr6",
+    topic: "creed",
+    question: { en: "Which angels record our good and bad deeds?", th: "มลาอิกะฮองค์ใดบันทึกความดีและความชั่วของมนุษย์?" },
+    options: {
+      en: ["Raqib and Atid", "Munkar and Nakir", "Israfil and Mikail", "Ridwan and Malik", "Jibril and Israfil"],
+      th: ["รอกีบ และ อะตีด", "มุงกัร และ นกีร", "อิสรอฟีล และ มีกาอีล", "ริฎวาน และ มะลิก", "ญิบรีล และ อิสรอฟีล"],
+    },
+    correct: 0,
+    explanation: { en: "Raqib records good deeds and Atid records bad deeds.", th: "รอกีบบันทึกความดี และอะตีดบันทึกความชั่ว" },
+  },
+  {
+    id: "q_cr7",
+    topic: "creed",
+    question: { en: "Which angel blows the trumpet on the Last Day?", th: "มลาอิกะฮองค์ใดเป่าแตรสังข์ในวันสิ้นโลก?" },
+    options: {
+      en: ["Israfil", "Jibril", "Mikail", "Malik", "Ridwan"],
+      th: ["อิสรอฟีล", "ญิบรีล", "มีกาอีล", "มะลิก", "ริฎวาน"],
+    },
+    correct: 0,
+    explanation: { en: "Israfil blows the trumpet — once to end the world, and again for the resurrection.", th: "อิสรอฟีลเป่าแตร ครั้งแรกเพื่อจบสิ้นโลก และครั้งที่สองเพื่อการฟื้นคืนชีพ" },
+  },
+  {
+    id: "q_cr8",
+    topic: "creed",
+    question: { en: "The vast plain where all people gather for judgment is called…", th: "ลานกว้างที่มนุษย์ทุกคนมาชุมนุมเพื่อรับการพิพากษาเรียกว่าอะไร?" },
+    options: {
+      en: ["Mahshar", "Arafah", "Mina", "Barzakh", "Sirat"],
+      th: ["ทุ่งมะฮ์ชัร", "ทุ่งอาเราะฟะฮ", "เขามินา", "บัรซัค", "ศิรอต"],
+    },
+    correct: 0,
+    explanation: { en: "Mahshar is where all people, from first to last, gather to be judged.", th: "ทุ่งมะฮ์ชัรคือที่ชุมนุมมนุษย์ทุกคนตั้งแต่คนแรกถึงคนสุดท้ายเพื่อรับการชำระบัญชี" },
+  },
+  {
+    id: "q_cr9",
+    topic: "creed",
+    question: { en: "The bridge over Hell that everyone must cross is called…", th: "สะพานที่พาดผ่านนรกซึ่งทุกคนต้องเดินข้ามเรียกว่าอะไร?" },
+    options: {
+      en: ["As-Sirat", "Al-Kawthar", "Al-Mizan", "Al-Hawd", "Al-Arsh"],
+      th: ["อัศศิรอต", "อัลเกาษัร", "อัลมีซาน", "อัลเฮาฎ", "อัลอัรช์"],
+    },
+    correct: 0,
+    explanation: { en: "As-Sirat is the bridge over Hell that everyone crosses on the Last Day.", th: "อัศศิรอตคือสะพานที่ทุกคนต้องเดินข้ามในวันสิ้นโลก" },
+  },
+  {
+    id: "q_cr10",
+    topic: "creed",
+    question: { en: "Worshipping Allah as if you can see Him is the level of…", th: "การเคารพภักดีอัลลอฮเสมือนว่าเห็นพระองค์ คือระดับใด?" },
+    options: {
+      en: ["Ihsan", "Islam", "Iman", "Taqwa", "Tawakkul"],
+      th: ["อิห์ซาน", "อิสลาม", "อีมาน", "ตักวา", "ตะวักกุล"],
+    },
+    correct: 0,
+    explanation: { en: "Ihsan is the highest level — to worship Allah as if you see Him, knowing He sees you.", th: "อิห์ซานคือระดับสูงสุด การเคารพภักดีอัลลอฮเสมือนเห็นพระองค์ โดยรู้ว่าพระองค์ทรงเห็นเรา" },
+  },
+
+  // ── Life of the Prophet ﷺ (Seerah) ─────────────────────
+  {
+    id: "q_se1",
+    topic: "seerah",
+    question: { en: "What did the title “Al-Amin” given to the Prophet ﷺ mean?", th: "ฉายา “อัลอะมีน” ของท่านนบีหมายถึงอะไร?" },
+    options: {
+      en: ["The trustworthy", "The brave", "The wealthy", "The wise", "The strong"],
+      th: ["ผู้ซื่อสัตย์ไว้วางใจได้", "ผู้กล้าหาญ", "ผู้ร่ำรวย", "ผู้มีปัญญา", "ผู้แข็งแกร่ง"],
+    },
+    correct: 0,
+    explanation: { en: "Even before prophethood, Muhammad ﷺ was known as Al-Amin — the trustworthy.", th: "ก่อนการเป็นนบี ท่านมุฮัมมัดเป็นที่รู้จักในนาม อัลอะมีน ผู้ซื่อสัตย์ไว้วางใจได้" },
+  },
+  {
+    id: "q_se2",
+    topic: "seerah",
+    question: { en: "Where did the Prophet ﷺ receive the first revelation?", th: "ท่านนบีได้รับโองการครั้งแรกที่ใด?" },
+    options: {
+      en: ["The cave of Hira", "The cave of Thawr", "The courtyard of the Kaaba", "The Prophet's Mosque", "Mount Arafah"],
+      th: ["ถ้ำฮิรออ์", "ถ้ำษูร", "ลานกะอบะฮ", "มัสยิดนบี", "ภูเขาอารอฟะฮ"],
+    },
+    correct: 0,
+    explanation: { en: "The first revelation came in the cave of Hira on the Mountain of Light.", th: "โองการแรกลงมา ณ ถ้ำฮิรออ์ บนภูเขานูร" },
+  },
+  {
+    id: "q_se3",
+    topic: "seerah",
+    question: { en: "What was the first word of the Quran revealed?", th: "คำแรกของอัลกุรอานที่ถูกประทานคือคำใด?" },
+    options: {
+      en: ["Iqra (Read!)", "Bismillah", "Alhamdulillah", "Qul", "Ameen"],
+      th: ["อิกเราะอ์ (จงอ่าน)", "บิสมิลลาฮ", "อัลฮัมดุลิลลาฮ", "กุล", "อามีน"],
+    },
+    correct: 0,
+    explanation: { en: "The very first word revealed was “Iqra” — “Read!”", th: "คำแรกสุดที่ถูกประทานคือ “อิกเราะอ์” — “จงอ่าน”" },
+  },
+  {
+    id: "q_se4",
+    topic: "seerah",
+    question: { en: "Who was the Prophet's first wife and the first person to accept Islam?", th: "ภรรยาคนแรกและผู้รับอิสลามคนแรกคือใคร?" },
+    options: {
+      en: ["Khadijah", "Aishah", "Fatimah", "Maryam", "Zaynab"],
+      th: ["นางเคาะดีญะฮ", "นางอาอิชะฮ", "นางฟาฏิมะฮ", "นางมารียัม", "นางซัยนับ"],
+    },
+    correct: 0,
+    explanation: { en: "Khadijah bint Khuwaylid was his first wife and the first to believe.", th: "นางเคาะดีญะฮ บินติ คุวัยลิด เป็นภรรยาคนแรกและผู้ศรัทธาคนแรก" },
+  },
+  {
+    id: "q_se5",
+    topic: "seerah",
+    question: { en: "What is the migration from Makkah to Madinah called?", th: "การอพยพจากมักกะฮไปมะดีนะฮเรียกว่าอะไร?" },
+    options: {
+      en: ["Hijrah", "Isra' & Mi'raj", "Fath Makkah", "Bay'ah", "Tawaf"],
+      th: ["ฮิจเราะฮ", "อิสรออ์ เมี๊ยะอุรอจญ์", "ฟัตฮุมักกะฮ", "บัยอะฮ", "เฏาะวาฟ"],
+    },
+    correct: 0,
+    explanation: { en: "The Hijrah marks the start of the Islamic calendar.", th: "ฮิจเราะฮเป็นจุดเริ่มต้นของปฏิทินอิสลาม" },
+  },
+  {
+    id: "q_se6",
+    topic: "seerah",
+    question: { en: "The migrants from Makkah and the “helpers” of Madinah were called…", th: "ผู้อพยพจากมักกะฮ และ “ผู้ช่วยเหลือ” ชาวมะดีนะฮเรียกว่ากลุ่มใด?" },
+    options: {
+      en: ["Muhajirin and Ansar", "Quraysh and Yahud", "Aws and Khazraj", "Sahabah and Tabi'in", "Muhajirin and Quraysh"],
+      th: ["มุฮาญิรีน และ อันศอร", "กุเรช และ ยะฮูดี", "เอาส์ และ ค็อซร็อจญ์", "ศ่อฮาบะฮ และ ตาบิอีน", "มุฮาญิรีน และ กุเรช"],
+    },
+    correct: 0,
+    explanation: { en: "Muhajirin migrated from Makkah; the Ansar of Madinah welcomed them.", th: "มุฮาญิรีนคือผู้อพยพจากมักกะฮ อันศอรชาวมะดีนะฮคือผู้ต้อนรับพวกเขา" },
+  },
+  {
+    id: "q_se7",
+    topic: "seerah",
+    question: { en: "What was the first battle between the Muslims and the Makkans?", th: "สงครามครั้งแรกระหว่างมุสลิมกับชาวมักกะฮคือสงครามใด?" },
+    options: {
+      en: ["Badr", "Uhud", "Khandaq", "Hunayn", "Tabuk"],
+      th: ["บัดร์", "อุฮุด", "คอนดัก", "ฮุนัยน์", "ตะบูก"],
+    },
+    correct: 0,
+    explanation: { en: "The Battle of Badr was the first major battle, and a great victory for the Muslims.", th: "สงครามบัดร์เป็นสงครามใหญ่ครั้งแรก และเป็นชัยชนะยิ่งใหญ่ของมุสลิม" },
+  },
+  {
+    id: "q_se8",
+    topic: "seerah",
+    question: { en: "The peaceful conquest of Makkah, without bloodshed, is called…", th: "การพิชิตมักกะฮอย่างสันติโดยไม่นองเลือดเรียกว่าอะไร?" },
+    options: {
+      en: ["Fath Makkah", "Hijrah", "Hudaybiyyah", "Badr", "Isra'"],
+      th: ["ฟัตฮุมักกะฮ", "ฮิจเราะฮ", "ฮุดัยบียะฮ", "บัดร์", "อิสรออ์"],
+    },
+    correct: 0,
+    explanation: { en: "Fath Makkah — the Prophet ﷺ entered Makkah without bloodshed.", th: "ฟัตฮุมักกะฮ ท่านนบีเข้าสู่มักกะฮโดยปราศจากการนองเลือด" },
+  },
+  {
+    id: "q_se9",
+    topic: "seerah",
+    question: { en: "At what age did the Prophet ﷺ pass away?", th: "ท่านนบีสิ้นชีวิตเมื่ออายุเท่าใด?" },
+    options: { en: ["63", "60", "65", "70", "50"], th: ["63 ปี", "60 ปี", "65 ปี", "70 ปี", "50 ปี"] },
+    correct: 0,
+    explanation: { en: "The Prophet ﷺ passed away at age 63, in Madinah.", th: "ท่านนบีสิ้นชีวิตเมื่ออายุ 63 ปี ที่เมืองมะดีนะฮ" },
+  },
+  {
+    id: "q_se10",
+    topic: "seerah",
+    question: { en: "Who was the first caliph after the Prophet ﷺ?", th: "ผู้นำ (เคาะลีฟะฮ) คนแรกหลังท่านนบีคือใคร?" },
+    options: {
+      en: ["Abu Bakr as-Siddiq", "Umar ibn al-Khattab", "Uthman ibn Affan", "Ali ibn Abi Talib", "Khalid ibn al-Walid"],
+      th: ["อบูบักร อัศศิดดีก", "อุมัร อิบนุ อัลค็อฏฏอบ", "อุสมาน อิบนุ อัฟฟาน", "อาลี อิบนุ อบีฏอลิบ", "คอลิด อิบนุ อัลวะลีด"],
+    },
+    correct: 0,
+    explanation: { en: "Abu Bakr as-Siddiq was the first caliph after the Prophet ﷺ.", th: "อบูบักร อัศศิดดีก เป็นเคาะลีฟะฮคนแรกหลังท่านนบี" },
+  },
+
+  // ── Stories of the Prophets ────────────────────────────
+  {
+    id: "q_ps1",
+    topic: "prophets-stories",
+    question: { en: "Who was the wife of Prophet Adam, the first woman?", th: "คู่ครองของนบีอาดัม ผู้เป็นสตรีคนแรกคือใคร?" },
+    options: {
+      en: ["Hawwa (Eve)", "Maryam", "Khadijah", "Aishah", "Sarah"],
+      th: ["นางฮาวา (อีฟ)", "นางมารียัม", "นางเคาะดีญะฮ", "นางอาอิชะฮ", "นางซาเราะฮ"],
+    },
+    correct: 0,
+    explanation: { en: "Hawwa (Eve) was the wife of Adam and the first woman.", th: "นางฮาวา (อีฟ) เป็นคู่ครองของนบีอาดัมและสตรีคนแรก" },
+  },
+  {
+    id: "q_ps2",
+    topic: "prophets-stories",
+    question: { en: "Who refused, out of arrogance, to prostrate to Adam?", th: "ผู้ใดปฏิเสธการคารวะต่ออาดัมด้วยความเย่อหยิ่ง?" },
+    options: {
+      en: ["Iblis", "Jibril", "Mikail", "Israfil", "Malik"],
+      th: ["อิบลีส", "ญิบรีล", "มีกาอีล", "อิสรอฟีล", "มะลิก"],
+    },
+    correct: 0,
+    explanation: { en: "Iblis (Satan) arrogantly refused Allah's command to prostrate to Adam.", th: "อิบลีส (มารร้าย) ปฏิเสธคำสั่งของอัลลอฮในการคารวะต่ออาดัมด้วยความเย่อหยิ่ง" },
+  },
+  {
+    id: "q_ps3",
+    topic: "prophets-stories",
+    question: { en: "Which prophet built a great ark to survive the flood?", th: "นบีท่านใดสร้างเรือใหญ่เพื่อรอดจากน้ำท่วมโลก?" },
+    options: {
+      en: ["Nuh (Noah)", "Ibrahim", "Yusuf", "Adam", "Musa"],
+      th: ["นูฮ (โนอาห์)", "อิบรอฮีม", "ยูซุฟ", "อาดัม", "มูซา"],
+    },
+    correct: 0,
+    explanation: { en: "Prophet Nuh built the ark and was saved from the great flood.", th: "นบีนูฮสร้างเรือและรอดจากน้ำท่วมใหญ่" },
+  },
+  {
+    id: "q_ps4",
+    topic: "prophets-stories",
+    question: { en: "Which prophet parted the Red Sea to escape Pharaoh?", th: "นบีท่านใดแหวกทะเลแดงเพื่อหนีฟาโรห์?" },
+    options: {
+      en: ["Musa (Moses)", "Isa", "Yunus", "Dawud", "Sulaiman"],
+      th: ["มูซา (โมเสส)", "อีซา", "ยูนุส", "ดาวูด", "สุลัยมาน"],
+    },
+    correct: 0,
+    explanation: { en: "Prophet Musa parted the Red Sea to save the Children of Israel from Pharaoh.", th: "นบีมูซาแหวกทะเลแดงเพื่อพาวงศ์วานอิสราเอลรอดพ้นจากฟาโรห์" },
+  },
+  {
+    id: "q_ps5",
+    topic: "prophets-stories",
+    question: { en: "Which prophet was thrown into a well and later became a minister in Egypt?", th: "นบีท่านใดถูกโยนลงบ่อน้ำ แล้วต่อมาเป็นเสนาบดีแห่งอียิปต์?" },
+    options: {
+      en: ["Yusuf (Joseph)", "Yaqub", "Ishaq", "Musa", "Harun"],
+      th: ["ยูซุฟ (โจเซฟ)", "ยะอ์กูบ", "อิสฮาก", "มูซา", "ฮารูน"],
+    },
+    correct: 0,
+    explanation: { en: "Prophet Yusuf was thrown into a well by his brothers and rose to become a minister of Egypt.", th: "นบียูซุฟถูกพี่ชายโยนลงบ่อน้ำ และได้กลายเป็นเสนาบดีคลังแห่งอียิปต์" },
+  },
+  {
+    id: "q_ps6",
+    topic: "prophets-stories",
+    question: { en: "Which prophet was swallowed by a great fish?", th: "นบีท่านใดถูกขังอยู่ในท้องปลาใหญ่?" },
+    options: {
+      en: ["Yunus (Jonah)", "Ayyub", "Yusuf", "Idris", "Salih"],
+      th: ["ยูนุส (โยนาห์)", "อัยยูบ", "ยูซุฟ", "อิดรีส", "ศอลิห์"],
+    },
+    correct: 0,
+    explanation: { en: "Prophet Yunus was kept in the belly of a great fish before Allah rescued him.", th: "นบียูนุสถูกขังในท้องปลาใหญ่ก่อนที่อัลลอฮจะทรงช่วยเหลือ" },
+  },
+  {
+    id: "q_ps7",
+    topic: "prophets-stories",
+    question: { en: "Which prophet could understand animals and ruled over the jinn?", th: "นบีท่านใดฟังภาษาสัตว์ได้และปกครองมวลญิน?" },
+    options: {
+      en: ["Sulaiman (Solomon)", "Dawud", "Yusuf", "Yunus", "Ayyub"],
+      th: ["สุลัยมาน (โซโลมอน)", "ดาวูด", "ยูซุฟ", "ยูนุส", "อัยยูบ"],
+    },
+    correct: 0,
+    explanation: { en: "Prophet Sulaiman was given power to understand animals and command the jinn.", th: "นบีสุลัยมานได้รับความสามารถในการฟังภาษาสัตว์และปกครองมวลญิน" },
+  },
+  {
+    id: "q_ps8",
+    topic: "prophets-stories",
+    question: { en: "Who was the pure mother of Prophet Isa (Jesus)?", th: "มารดาผู้บริสุทธิ์ของนบีอีซา (เยซู) คือใคร?" },
+    options: {
+      en: ["Maryam (Mary)", "Asiyah", "Khadijah", "Sarah", "Hawwa"],
+      th: ["นางมารียัม (แมรี่)", "นางอาสิยะฮ", "นางเคาะดีญะฮ", "นางซาเราะฮ", "นางฮาวา"],
+    },
+    correct: 0,
+    explanation: { en: "Maryam (Mary) is honored in the Quran as the pure mother of Prophet Isa.", th: "นางมารียัม (แมรี่) ได้รับการยกย่องในกุรอานว่าเป็นมารดาผู้บริสุทธิ์ของนบีอีซา" },
+  },
+  {
+    id: "q_ps9",
+    topic: "prophets-stories",
+    question: { en: "Who first built the Kaaba?", th: "ใครเป็นผู้สร้างกะอบะฮครั้งแรก?" },
+    options: {
+      en: ["Ibrahim and Ismail", "Musa and Harun", "Dawud and Sulaiman", "Adam and Nuh", "Muhammad ﷺ and Ali"],
+      th: ["อิบรอฮีม และ อิสมาอีล", "มูซา และ ฮารูน", "ดาวูด และ สุลัยมาน", "อาดัม และ นูฮ", "มุฮัมมัด และ อาลี"],
+    },
+    correct: 0,
+    explanation: { en: "Prophets Ibrahim and his son Ismail first built the Kaaba.", th: "นบีอิบรอฮีมและนบีอิสมาอีลผู้เป็นบุตรเป็นผู้สร้างกะอบะฮครั้งแรก" },
+  },
+  {
+    id: "q_ps10",
+    topic: "prophets-stories",
+    question: { en: "Who is called the “father of the prophets”?", th: "ใครได้ชื่อว่าเป็น “บิดาแห่งบรรดาศาสดา”?" },
+    options: {
+      en: ["Ibrahim", "Adam", "Musa", "Isa", "Nuh"],
+      th: ["อิบรอฮีม", "อาดัม", "มูซา", "อีซา", "นูฮ"],
+    },
+    correct: 0,
+    explanation: { en: "Prophet Ibrahim is called the father of the prophets.", th: "นบีอิบรอฮีมได้ชื่อว่าเป็นบิดาแห่งบรรดาศาสดา" },
+  },
+
+  // ── Manners & Etiquette (Adab) ─────────────────────────
+  {
+    id: "q_ad1",
+    topic: "adab",
+    question: { en: "Following the Sunnah, a Muslim should eat with…", th: "ตามซุนนะฮ มุสลิมควรรับประทานอาหารด้วย…" },
+    options: {
+      en: ["The right hand, saying Bismillah", "The left hand", "Both hands while standing", "A spoon only", "The left hand, saying Ameen"],
+      th: ["มือขวา พร้อมกล่าวบิสมิลลาฮ", "มือซ้าย", "สองมือขณะยืน", "ใช้ช้อนเท่านั้น", "มือซ้าย พร้อมกล่าวอามีน"],
+    },
+    correct: 0,
+    explanation: { en: "Eat with the right hand, starting with “Bismillah” and ending with “Alhamdulillah”.", th: "รับประทานด้วยมือขวา เริ่มด้วย “บิสมิลลาฮ” และจบด้วย “อัลฮัมดุลิลลาฮ”" },
+  },
+  {
+    id: "q_ad2",
+    topic: "adab",
+    question: { en: "What do you say after finishing a meal?", th: "หลังรับประทานอาหารเสร็จ ควรกล่าวคำใด?" },
+    options: {
+      en: ["Alhamdulillah", "Bismillah", "Astaghfirullah", "Allāhu Akbar", "Ameen"],
+      th: ["อัลฮัมดุลิลลาฮ", "บิสมิลลาฮ", "อัสตัฆฟิรุลลอฮ", "อัลลอฮุอักบัร", "อามีน"],
+    },
+    correct: 0,
+    explanation: { en: "“Alhamdulillah” (all praise is for Allah) is said to thank Allah after eating.", th: "กล่าว “อัลฮัมดุลิลลาฮ” เพื่อขอบคุณอัลลอฮหลังรับประทานอาหาร" },
+  },
+  {
+    id: "q_ad3",
+    topic: "adab",
+    question: { en: "When someone sneezes and says “Alhamdulillah”, the listener replies…", th: "เมื่อผู้จามกล่าว “อัลฮัมดุลิลลาฮ” ผู้ได้ยินตอบว่า…" },
+    options: {
+      en: ["Yarhamukallah", "Alhamdulillah", "Assalamu alaikum", "Bismillah", "Ameen"],
+      th: ["ยัรฮะมุกัลลอฮ", "อัลฮัมดุลิลลาฮ", "อัสสะลามุอะลัยกุม", "บิสมิลลาฮ", "อามีน"],
+    },
+    correct: 0,
+    explanation: { en: "The listener replies “Yarhamukallah” — may Allah have mercy on you.", th: "ผู้ได้ยินตอบ “ยัรฮะมุกัลลอฮ” — ขออัลลอฮทรงเมตตาท่าน" },
+  },
+  {
+    id: "q_ad4",
+    topic: "adab",
+    question: { en: "In the Quran, backbiting (ghibah) is compared to…", th: "ในกุรอาน การนินทา (ฆีบะฮ) ถูกเปรียบเทียบกับสิ่งใด?" },
+    options: {
+      en: ["Eating the flesh of your dead brother", "Stealing money", "Drinking alcohol", "Breaking a promise", "Missing prayer"],
+      th: ["การกินเนื้อพี่น้องของตนที่ตายแล้ว", "การขโมยทรัพย์", "การดื่มสุรา", "การผิดสัญญา", "การขาดละหมาด"],
+    },
+    correct: 0,
+    explanation: { en: "The Quran likens backbiting to eating the flesh of one's dead brother — it is forbidden.", th: "กุรอานเปรียบการนินทาเหมือนการกินเนื้อพี่น้องที่ตายแล้ว เป็นสิ่งต้องห้าม" },
+  },
+  {
+    id: "q_ad5",
+    topic: "adab",
+    question: { en: "Smiling at your brother is rewarded like…", th: "การยิ้มให้พี่น้องมีผลบุญเทียบเท่าสิ่งใด?" },
+    options: {
+      en: ["Giving charity (sadaqah)", "Praying 100 rak'ah", "Fasting a day", "Performing Umrah", "Reading the whole Quran"],
+      th: ["การบริจาคทาน (ศอดะเกาะฮ)", "การละหมาด 100 รอกะอัต", "การถือศีลอด 1 วัน", "การทำอุมเราะฮ", "การอ่านกุรอานจบเล่ม"],
+    },
+    correct: 0,
+    explanation: { en: "The Prophet ﷺ taught that smiling at your brother is a charity (sadaqah).", th: "ท่านนบีสอนว่าการยิ้มให้พี่น้องเป็นการบริจาคทาน (ศอดะเกาะฮ)" },
+  },
+  {
+    id: "q_ad6",
+    topic: "adab",
+    question: { en: "What is said when you hear the Prophet's ﷺ name?", th: "เมื่อได้ยินพระนามของท่านนบี ควรกล่าวคำใด?" },
+    options: {
+      en: ["Sallallahu alayhi wa sallam", "Alhamdulillah", "Astaghfirullah", "Subhanallah", "Ameen"],
+      th: ["ศ็อลลัลลอฮุ อะลัยฮิ วะซัลลัม", "อัลฮัมดุลิลลาฮ", "อัสตัฆฟิรุลลอฮ", "ซุบฮานัลลอฮ", "อามีน"],
+    },
+    correct: 0,
+    explanation: { en: "“Sallallahu alayhi wa sallam” — may Allah's blessings and peace be upon him.", th: "“ศ็อลลัลลอฮุ อะลัยฮิ วะซัลลัม” — ขออัลลอฮทรงอำนวยพรและความสันติแก่ท่าน" },
+  },
+  {
+    id: "q_ad7",
+    topic: "adab",
+    question: { en: "What is Islamic marriage called?", th: "การแต่งงานในอิสลามเรียกว่าอะไร?" },
+    options: {
+      en: ["Nikah", "Walimah", "Talaq", "Faskh", "Mahar"],
+      th: ["นิกาห์", "วะลีมะฮ", "ตอลาก", "ฟะซัค", "มะฮัร"],
+    },
+    correct: 0,
+    explanation: { en: "Nikah is the Islamic marriage contract.", th: "นิกาห์คือการสมรสตามหลักอิสลาม" },
+  },
+  {
+    id: "q_ad8",
+    topic: "adab",
+    question: { en: "The gift the groom gives the bride, which becomes her own right, is called…", th: "ของขวัญที่ฝ่ายชายมอบให้ฝ่ายหญิงและเป็นสิทธิ์ของเธอ เรียกว่าอะไร?" },
+    options: {
+      en: ["Mahar", "Riba", "Zakat", "Sadaqah", "Walimah"],
+      th: ["มะฮัร", "ริบา", "ซะกาต", "เศาะดะเกาะฮ", "วะลีมะฮ"],
+    },
+    correct: 0,
+    explanation: { en: "The mahar (dowry) is the bride's own right, given by the groom.", th: "มะฮัร (สินสอด) เป็นสิทธิ์ของฝ่ายหญิง มอบให้โดยฝ่ายชาย" },
+  },
+  {
+    id: "q_ad9",
+    topic: "adab",
+    question: { en: "How does sadaqah differ from zakat?", th: "ศอดะเกาะฮต่างจากซะกาตอย่างไร?" },
+    options: {
+      en: ["Sadaqah is voluntary; zakat is obligatory", "Sadaqah is obligatory; zakat is voluntary", "They are exactly the same", "Sadaqah is only for family", "Zakat is only given in Ramadan"],
+      th: ["ศอดะเกาะฮสมัครใจ ส่วนซะกาตบังคับ", "ศอดะเกาะฮบังคับ ส่วนซะกาตสมัครใจ", "ทั้งสองเหมือนกันทุกประการ", "ศอดะเกาะฮให้เฉพาะครอบครัว", "ซะกาตจ่ายเฉพาะในรอมฎอน"],
+    },
+    correct: 0,
+    explanation: { en: "Sadaqah is voluntary charity given any time; zakat is obligatory at a set rate.", th: "ศอดะเกาะฮเป็นทานสมัครใจทำเมื่อใดก็ได้ ส่วนซะกาตเป็นทานบังคับตามอัตราที่กำหนด" },
+  },
+  {
+    id: "q_ad10",
+    topic: "adab",
+    question: { en: "A handshake greeting (musafahah) is allowed with…", th: "การสัมผัสมือทักทาย (มูซอฟาฮะฮ) อนุญาตให้ทำกับใคร?" },
+    options: {
+      en: ["The same gender, or a mahram relative", "Anyone of the opposite gender", "Only strangers", "Only coworkers", "No one at all"],
+      th: ["เพศเดียวกัน หรือญาติมะฮ์รอม", "เพศตรงข้ามทุกคน", "เฉพาะคนแปลกหน้า", "เฉพาะเพื่อนร่วมงาน", "ไม่ได้กับใครเลย"],
+    },
+    correct: 0,
+    explanation: { en: "Handshaking is allowed with the same gender or with a mahram (a relative you cannot marry).", th: "การสัมผัสมืออนุญาตกับเพศเดียวกัน หรือกับญาติมะฮ์รอม (ผู้ที่แต่งงานด้วยไม่ได้)" },
+  },
 ];
 
 // Topics that actually have questions, in deck order, with their icon + title.
